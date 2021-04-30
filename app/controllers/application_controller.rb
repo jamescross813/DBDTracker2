@@ -12,4 +12,8 @@ class ApplicationController < Sinatra::Base
         erb :index
     end
 
+    get '/registrations/signup' do
+        erb :'/registrations/signup'
+    end
+
 end
