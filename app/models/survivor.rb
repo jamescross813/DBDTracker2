@@ -4,9 +4,4 @@ class Survivor < ActiveRecord::Base
     has_many :user_survivors
     has_many :users, through: :user_survivors
     
-
-    
-
-    
-   
 end
