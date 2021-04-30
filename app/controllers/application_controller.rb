@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
         
         if @user.save
             session[:user_id] = @user.id
-            binding.pry
+           
             redirect "/users/#{@user.id}"
           else
             redirect '/failure'
