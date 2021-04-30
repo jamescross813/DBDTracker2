@@ -1,0 +1,3 @@
+class SurvivorsController < ApplicationController
+
+end
