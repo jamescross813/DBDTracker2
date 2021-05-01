@@ -1,9 +1,22 @@
 <a href = "/logout">Log out</a>
 <% if Helpers.logged_in?(session) %>
     <h1>Welcome <%= Helpers.current_user(session).username %></h1>
+     <h2>Currencies:</h2>
+         <% @currencies.each do |c| %>
+         
+         <h3><a href='/currencies/<%= c.id %>'><%= c.currency_name.capitalize %></h3></a>
+         
+         
+         <% end %>
      <% end %>
 
-<br>
+        <a href = "/killers/<%= @killer.id %>">Killer</a><br>
+        <a href = "/surviors/<%= @survivor.id %>">Survivor</a><br> 
+
+        <a href='/users/<%= @user.id %>/edit'>Change username</a><br>
+        <a href='/killers/new'>Add Killers</a><br>
+        <a href='/survivors/new'>Add Survivors</a><br>
+        <a href ='/currencies/new'>Add Currency</a>
 
 
 <form action = '/users/<%= @user.id %>/delete' method = "post">
