@@ -1,0 +1,20 @@
+<h1>Choose a New Killer</h1>
+
+<form action="/killers" method="POST">
+  <label>Killer Name:</label>
+  <br>
+  
+   <% @killers.each do |k| %>
+    <input type="radio" name="killer[killer_id]" id="<%= k.id %>" value="<%= k.id %>"><%= k.name %><br>
+  <% end %>
+
+  <br>
+  
+  <h3>Select Your Perks</h3>
+  <% @perks.each do |p| %>
+    <input type="checkbox" name="killer[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>"><%= p.perk_name %><br>
+  <% end %>
+  <br>
+
+  <input type="submit" value="Create killer">
+</form>
