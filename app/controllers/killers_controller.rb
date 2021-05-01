@@ -31,9 +31,11 @@ class KillersController < ApplicationController
         
         get '/killers/:id' do 
             if session.has_key?(:user_id)
-                @user = User.find(session[:user_id])
+                @user = User.find(session[:user_id])  
             end
-            @killer = Killer.find(params[:id])
+                @killer = Killer.find(params[:id])
+                @killerperks = []
+                @killerperks << KillerPerk.find_by(:killer_id => @killer.id)
             erb :'/killers/show'
         end
         

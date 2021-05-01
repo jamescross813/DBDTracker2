@@ -10,5 +10,10 @@ class Helpers
         !!session[:user_id]
     end
 
+    def self.has_values?(session)
+        if UserKiller.find_by(:user_id => session[:user_id])
+        end
+    end
+
     
 end

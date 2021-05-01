@@ -5,15 +5,18 @@
          <% @currencies.each do |c| %>
          
          <h3><a href='/currencies/<%= c.id %>'><%= c.currency_name.capitalize %></h3></a>
-         
-         
          <% end %>
-         <h2>Killers</h2>
-         <% @killer_ids.each do |k| %>
-                  
-         <h3><a href='/killers/<%= k.killer_id %>'><%= Killer.find(k.killer_id).name %></h3></a>
-         <% end %>
-     <% end %>
+
+            <% if Helpers.has_values?(session) %>    
+     
+                <h2>Killers</h2>
+                <% @killer_ids.each do |k| %>
+                    
+                <h3><a href='/killers/<%= k.killer_id %>'><%= Killer.find(k.killer_id).name %></h3></a>
+                <% end %>
+            <% end %>
+<% end %>
+     
 
          
 
