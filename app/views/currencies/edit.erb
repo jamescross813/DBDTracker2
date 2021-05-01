@@ -1,0 +1,20 @@
+<h1>Edit page</h1>
+
+  <form action="/currencies/<%= @currency.id %>" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <label>Edit the currency name:</label>
+    <br>
+   
+    <input type="text" name="currency[currency_name]" value="<%= @currency.currency_name %>">
+    <br>
+      <label>Edit the currency's amount:</label>
+    <br>
+    <input type="text" name="currency[amount]" value="<%= @currency.amount %>">
+    <br>
+    
+    <input type="submit" value="Update currency">
+  </form> 
+
+  <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br>
+
+  
