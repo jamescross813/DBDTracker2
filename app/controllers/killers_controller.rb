@@ -20,12 +20,18 @@ class KillersController < ApplicationController
             
             @user = User.find(session[:user_id])
             @killer = Killer.find_by_id(params[:killer][:killer_id])    
-            @user.killers << UserKiller.create(killer_id: params[:killer][:killer_id], :user_id => @user.id)
-
+            @uk = UserKiller.create(killer_id: params[:killer][:killer_id], :user_id => @user.id)
+            
+            @userkillers =[]
+            @userkillers << @uk
+            
             params[:killer][:perk_ids].each do |p|
                 
-                KillerPerk.create(killer_id: params[:killer][:killer_id], perk_id: p) 
-            end           
+                @kp = KillerPerk.create(killer_id: params[:killer][:killer_id], perk_id: p) 
+                @killer.perks << @kp
+               
+            end 
+            @killer.perks          
             redirect "/killers/#{@killer.id}"
         end
         
@@ -33,9 +39,13 @@ class KillersController < ApplicationController
             if session.has_key?(:user_id)
                 @user = User.find(session[:user_id])  
             end
+            @killer_ids = @user.killers
+            @killer_ids.each do |ki|
+            @killer = Killer.find_by(:id => ki)
+            @killerperks = @killer.perks
+            end
                 @killer = Killer.find(params[:id])
-                @killerperks = []
-                @killerperks << KillerPerk.find_by(:killer_id => @killer.id)
+                
             erb :'/killers/show'
         end
         
