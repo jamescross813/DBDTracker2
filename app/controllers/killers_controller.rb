@@ -17,12 +17,15 @@ class KillersController < ApplicationController
         end
         
         post'/killers' do
-            binding.pry
-            @user = User.find(session[:user_id])
-
-            UserKiller.create(killer_id: params[:killer][:killer_id], :user_id => @user)
-            KillerPerk.create(killer_id: params[:killer][:killer_id], perk_id: params[:killer][:perk_ids])
             
+            @user = User.find(session[:user_id])
+            @killer = Killer.find_by_id(params[:killer][:killer_id])    
+            UserKiller.create(killer_id: params[:killer][:killer_id], :user_id => @user)
+
+            params[:killer][:perk_ids].each do |p|
+                
+                KillerPerk.create(killer_id: params[:killer][:killer_id], perk_id: p) 
+            end           
             redirect "/killers/#{@killer.id}"
         end
         
@@ -33,6 +36,16 @@ class KillersController < ApplicationController
         end
         
         patch '/killers/:id/edit' do
+            @user = User.find(session[:user_id])
+            @killer = Killer.find_by_id(params[:killer][:killer_id])  
+
+            params[:killer][:perk_ids].each do |p|
+            if PerkKiller.killer_id == @killer.id && KillerPerk.perk_id == p.id 
+            
+                
+                KillerPerk.create(killer_id: params[:killer][:killer_id], perk_id: p) 
+            end           
+
         end
         
         delete '/killers/:id/delete' do
