@@ -12,6 +12,9 @@ class Helpers
 
     def self.has_values?(session)
         if UserKiller.find_by(:user_id => session[:user_id])
+            @userkiller = UserKiller.find_by(:user_id => session[:user_id])
+             
+            # KillerPerks.find_by
         end
     end
 
