@@ -10,3 +10,10 @@
 <p>Lore: <br><%= @killer.lore %></p> 
 <h3>Difficulty: <%= @killer.difficulty %></h3>
 <h3>DLC: <%= @killer.dlc %>
+
+<% if Helpers.logged_in?(session) %>
+    <h1>Welcome <%= Helpers.current_user(session).username %></h1>
+<a href='/killers/<%= @killer.id %>/edit'>Edit</a><br>
+<a href='/users/<%= @user.id %>/edit'>Return to User Homepage</a><br>
+
+<% end %>

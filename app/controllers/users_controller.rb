@@ -2,7 +2,11 @@ class UsersController < ApplicationController
     get '/users/:id' do
         @user = User.find_by_id(session[:user_id])
         @currencies = @user.currencies
-        @killer = Killer.find(1)
+        
+        @killer_ids = []
+        @killer_ids << UserKiller.find_by(:user_id => session[:user_id])
+        
+       
         @survivor = Survivor.find(1)
         erb :'/users/show'
     end

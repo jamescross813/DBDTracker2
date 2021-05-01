@@ -8,10 +8,14 @@
          
          
          <% end %>
+         <h2>Killers</h2>
+         <% @killer_ids.each do |k| %>
+                  
+         <h3><a href='/killers/<%= k.killer_id %>'><%= Killer.find(k.killer_id).name %></h3></a>
+         <% end %>
      <% end %>
 
-        <a href = "/killers/<%= @killer.id %>">Killer</a><br>
-        <a href = "/surviors/<%= @survivor.id %>">Survivor</a><br> 
+         
 
         <a href='/users/<%= @user.id %>/edit'>Change username</a><br>
         <a href='/killers/new'>Add Killers</a><br>
