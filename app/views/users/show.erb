@@ -4,17 +4,17 @@
      <h2>Currencies:</h2>
          <% @currencies.each do |c| %>
          
-         <h3><a href='/currencies/<%= c.id %>'><%= c.currency_name.capitalize %></h3></a>
+            <h3><a href='/currencies/<%= c.id %>'><%= c.currency_name.capitalize %></h3></a>
          <% end %>
 
-            <% if Helpers.has_values?(session) %>    
+             
      
-                <h2>Killers</h2>
-                <% @killer_ids.each do |k| %>
+    <h2>Killers:</h2>
+        <% @killer_ids.each do |k| %>
                     
-                <h3><a href='/killers/<%= k.id %>'><%= k.name %></h3></a>
-                <% end %>
-            <% end %>
+            <h3><a href='/killers/<%= k.id %>'><%= k.name %></h3></a>
+        <% end %>
+            
 <% end %>
      
 
@@ -23,7 +23,7 @@
         <a href='/users/<%= @user.id %>/edit'>Change username</a><br>
         <a href='/killers/new'>Add Killers</a><br>
         <a href='/survivors/new'>Add Survivors</a><br>
-        <a href ='/currencies/new'>Add Currency</a>
+        <a href ='/currencies/new'>Add Currency</a><br>
 
 
 <form action = '/users/<%= @user.id %>/delete' method = "post">
