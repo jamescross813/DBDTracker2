@@ -12,7 +12,7 @@
                 <h2>Killers</h2>
                 <% @killer_ids.each do |k| %>
                     
-                <h3><a href='/killers/<%= k.killer_id %>'><%= Killer.find(k.killer_id).name %></h3></a>
+                <h3><a href='/killers/<%= k.id %>'><%= k.name %></h3></a>
                 <% end %>
             <% end %>
 <% end %>

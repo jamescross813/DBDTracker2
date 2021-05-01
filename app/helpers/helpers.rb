@@ -18,5 +18,17 @@ class Helpers
         end
     end
 
+    def self.killers(session)
+        @user = User.find_by(:id => session[:user_id])
+        @killer_ids = []
+        UserKiller.all.each do |uk|
+            while uk.user_id == @user.id
+                @killer_ids << uk.killer_id
+            end
+            
+        end
+        
+    end
+
     
 end

@@ -20,7 +20,7 @@ class KillersController < ApplicationController
             
             @user = User.find(session[:user_id])
             @killer = Killer.find_by_id(params[:killer][:killer_id])    
-            UserKiller.create(killer_id: params[:killer][:killer_id], :user_id => @user.id)
+            @user.killers << UserKiller.create(killer_id: params[:killer][:killer_id], :user_id => @user.id)
 
             params[:killer][:perk_ids].each do |p|
                 
