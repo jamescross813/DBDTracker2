@@ -1,0 +1,11 @@
+<h1>Survivor Perks</h1>
+<% @perks_survivor.each do |p| %>
+<a href="/perks/<%= p.id %>"><%= p.perk_name %></a><br>
+
+<% end %>
+
+<h1>Killer Perks</h1>
+<% @perks_killer.each do |p| %>
+<a href="/perks/<%= p.id %>"><%= p.perk_name %></a><br>
+
+<% end %>
