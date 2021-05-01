@@ -5,7 +5,7 @@
 
 <% @killerperks.each do |kp| %>
          
-         <h3><a href='/perks/<%= kp.id %>'><%= kp.perk_name %></h3></a>
+         <h3><a href='/perks/<%= kp.perk_id %>'><%= Perk.find_by_id(kp.perk_id).perk_name %></h3></a>
          
          <% end %>
 <% end %>

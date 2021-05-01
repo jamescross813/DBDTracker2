@@ -1,7 +1,7 @@
 class Survivor < ActiveRecord::Base
-    has_many :survivor_perks
-    has_many :perks, through: :survivor_perks
-    has_many :user_survivors
-    has_many :users, through: :user_survivors
+    has_many :user_survivor_perks
+    has_many :perks, through: :user_survivor_perks
+    
+    has_many :users, through: :user_survivor_perks
     
 end

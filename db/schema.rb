@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_30_185336) do
+ActiveRecord::Schema.define(version: 2021_05_01_073910) do
 
   create_table "currencies", force: :cascade do |t|
     t.string "currency_name"
@@ -59,9 +59,21 @@ ActiveRecord::Schema.define(version: 2021_04_30_185336) do
     t.string "dlc"
   end
 
+  create_table "user_killer_perks", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "killer_id"
+    t.integer "perk_id"
+  end
+
   create_table "user_killers", force: :cascade do |t|
     t.integer "user_id"
     t.integer "killer_id"
+  end
+
+  create_table "user_survivor_perks", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "survivor_id"
+    t.integer "perk_id"
   end
 
   create_table "user_survivors", force: :cascade do |t|
