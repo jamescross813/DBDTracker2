@@ -35,6 +35,7 @@ class KillersController < ApplicationController
     end
         
     get '/killers/:id' do 
+        
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])  
             @killer = Killer.find_by_id(params[:id])
@@ -42,10 +43,12 @@ class KillersController < ApplicationController
 
             UserKillerPerk.all.each do |ukp|
                 if ukp.user_id == @user.id && ukp.killer_id == @killer.id
+                    
                     @killerperks << ukp
                 end
             end
             @killerperks 
+            
         else
             @killer = Killer.find_by_id(params[:id])
         end   
@@ -63,46 +66,35 @@ class KillersController < ApplicationController
                 @perks << perk  
             end
         end 
-        
-        
         @killer = Killer.find_by_id(params[:id])
-        # @killerperks = []
-        # UserKillerPerk.all.each do |ukp|
-        #     if ukp.user_id == @user.id && ukp.killer_id == @killer.id
-        #         @killerperks << ukp
-            
-        #     end    
-        # end 
+       
          erb :'/killers/edit'
      end
         
-    patch '/killers/:id' do
+    patch '/killers/:id/edit' do
         
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])  
         
-
-        @killer = Killer.find_by_id(params[:killer][:killer_id])  
-
+        end    
+        @killer = Killer.find_by(:name => params[:killer][:name])  
+     
         UserKillerPerk.all.each do |ukp|
             if ukp.user_id == @user.id && ukp.killer_id == @killer.id
                 ukp.delete
             end  
         end 
+
         @killerperks = []
-
-        UserKillerPerk.all.each do |ukp|
-            if ukp.user_id == @user.id && ukp.killer_id == @killer.id
-                @killerperks << ukp
-            end  
-
-
-        end
-    end 
         
-            redirect "/killers/#{@killer.id}"
+        params[:killer][:perk_ids].each do |p|     
+             UserKillerPerk.create(:killer_id => @killer.id, user_id: @user.id, perk_id: p)   
+        end   
+
+        redirect "/killers/#{@killer.id}"
     end
         
     delete '/killers/:id/delete' do
+        
     end
 end
