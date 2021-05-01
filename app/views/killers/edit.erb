@@ -1,0 +1,22 @@
+<h1>Update Killer</h1>
+
+<h2>Edits for <%= @killer.name %></h2>
+
+  <form action="/killers/<%= @killer.id %>" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <label>Edit the Killer's Name:</label>
+    <br>
+    <input type="text" name="killer[name]" value="<%= @killer.name %>">
+
+    <br>
+    <p>Select Perks!</p>
+
+
+    <h3>Existing Perks</h3>
+    <% @perks.each do |perk| %>
+      <input type="checkbox" name="killer[perk_id][]" id="<%= perk.id %>" value="<%= perk.id %>" <%='checked' if @killer.perks.include?(perk) %>><%= perk.name %></input><br>
+    <% end %>
+    <br>
+
+    <input type="submit" value="Update killer">
+  </form>  %>
