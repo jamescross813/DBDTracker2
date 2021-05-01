@@ -1,0 +1,24 @@
+<h1>Choose a New Survivor</h1>
+
+<form action="/survivors" method="POST">
+  <label>Survivor Name:</label>
+  <br>
+  
+   <% @survivors.each do |k| %>
+    <input type="radio" name="survivor[survivor_id]" id="<%= k.id %>" value="<%= k.id %>"><%= k.name %><br>
+  <% end %>
+
+  <br>
+  
+
+
+  <h3>Select Your Perks</h3>
+  <% @perks.each do |p| %>
+    <input type="radio" name="survivor[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>"><%= p.perk_name %><br>
+  <% end %>
+  <br>
+
+  
+
+  <input type="submit" value="Create survivor">
+</form>
