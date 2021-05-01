@@ -12,11 +12,12 @@
     <p>Select Perks!</p>
 
 
-    <h3>Existing Perks</h3>
-    <% @perks.each do |perk| %>
-      <input type="checkbox" name="killer[perk_id][]" id="<%= perk.id %>" value="<%= perk.id %>" <%='checked' if @killer.perks.include?(perk) %>><%= perk.name %></input><br>
+    <h3>Perks</h3>
+    <% @perks.each do |p| %>
+    
+      <input type="checkbox" name="killer[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>"><%= p.perk_name %> <br>
     <% end %>
     <br>
 
     <input type="submit" value="Update killer">
-  </form>  %>
+  </form> 

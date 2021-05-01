@@ -60,9 +60,11 @@ ActiveRecord::Schema.define(version: 2021_05_01_073910) do
   end
 
   create_table "user_killer_perks", force: :cascade do |t|
+    t.integer "user_killer_id"
     t.integer "user_id"
     t.integer "killer_id"
     t.integer "perk_id"
+    t.integer "killer_perks_id"
   end
 
   create_table "user_killers", force: :cascade do |t|

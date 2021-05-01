@@ -8,79 +8,98 @@ class KillersController < ApplicationController
         @user = User.find(session[:user_id])
         @killers = Killer.all
         @perks = []
+
         Perk.all.each do |perk|
             if perk.role == "Killer"
                 @perks << perk  
             end
         end
+    
         erb :'/killers/new'
     end
         
     post '/killers' do
         @user = User.find(session[:user_id])
-        @killer = Killer.find_by_id(params[:killer][:killer_id])         
-       @killerperks =[] 
+        @killer = Killer.find_by_id(params[:killer][:killer_id])   
+        @user.killers << @killer      
+        @killerperks =[] 
+        
         params[:killer][:perk_ids].each do |p|     
-           
             @kp = UserKillerPerk.create(killer_id: params[:killer][:killer_id], user_id: @user.id, perk_id: p)
-            @killerperks << @kp
-               
+            @killerperks << @kp   
         end 
         
-        @killerperks          
+        @killerperks  
+
         redirect "/killers/#{@killer.id}"
     end
         
     get '/killers/:id' do 
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])  
-        end
-        
-        @killer = Killer.find_by_id(params[:id])
-        @killerperks = []
-        UserKillerPerk.all.each do |ukp|
-            if ukp.user_id == @user.id && ukp.killer_id == @killer.id
-                @killerperks << ukp
+            @killer = Killer.find_by_id(params[:id])
+            @killerperks = []
 
+            UserKillerPerk.all.each do |ukp|
+                if ukp.user_id == @user.id && ukp.killer_id == @killer.id
+                    @killerperks << ukp
+                end
             end
-            
-            
-        end
-       
-        @killerperks
-               
-            
-    
-        
-                
+            @killerperks 
+        else
+            @killer = Killer.find_by_id(params[:id])
+        end   
         erb :'/killers/show'
     end
 
     get '/killers/:id/edit' do
-        @user = User.find_by_id(session[:user_id])
-        @perks = @killer.perks
-        @killer = Killer.find_by_id(params[:id])
-         erb :'/killers/edit'
-     end
         
-    patch '/killers/:id/edit' do
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])  
         end
-        @killer = Killer.find_by_id(params[:killer][:killer_id])  
-        @perkkiller = PerkKiller.find(:killer_id => @killer, :perk_id => params[:killer][:perk_ids])
+        @perks = []
+        Perk.all.each do |perk|
+            if perk.role == "Killer"
+                @perks << perk  
+            end
+        end 
+        
+        
+        @killer = Killer.find_by_id(params[:id])
+        # @killerperks = []
+        # UserKillerPerk.all.each do |ukp|
+        #     if ukp.user_id == @user.id && ukp.killer_id == @killer.id
+        #         @killerperks << ukp
+            
+        #     end    
+        # end 
+         erb :'/killers/edit'
+     end
+        
+    patch '/killers/:id' do
+        
+        if session.has_key?(:user_id)
+            @user = User.find(session[:user_id])  
+        
 
-        params[:killer][:perk_ids].each do |p|
-            if PerkKiller.killer_id == @killer.id && KillerPerk.perk_id == p.id 
-                @perkkiller.delete
-                binding.pry
-            end      
-        @killer_ids = @user.killers
-            @killer_ids.each do |ki|
-                    @killer = Killer.find_by(:id => ki)
-                    @killerperks = @killer.perks
-            end     
+        @killer = Killer.find_by_id(params[:killer][:killer_id])  
+
+        UserKillerPerk.all.each do |ukp|
+            if ukp.user_id == @user.id && ukp.killer_id == @killer.id
+                ukp.delete
+            end  
+        end 
+        @killerperks = []
+
+        UserKillerPerk.all.each do |ukp|
+            if ukp.user_id == @user.id && ukp.killer_id == @killer.id
+                @killerperks << ukp
+            end  
+
+
         end
+    end 
+        
             redirect "/killers/#{@killer.id}"
     end
         
