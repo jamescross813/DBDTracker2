@@ -77,9 +77,11 @@ class KillersController < ApplicationController
             @user = User.find(session[:user_id])  
         
         end    
-        @killer = Killer.find_by(:name => params[:killer][:name])  
+      
+        @killer = Killer.find_by_id(params[:id])  
      
         UserKillerPerk.all.each do |ukp|
+            
             if ukp.user_id == @user.id && ukp.killer_id == @killer.id
                 ukp.delete
             end  
@@ -95,6 +97,16 @@ class KillersController < ApplicationController
     end
         
     delete '/killers/:id/delete' do
-        
+        if session.has_key?(:user_id)
+            @user = User.find(session[:user_id])  
+        end      
+        @killer = Killer.find(params[:killer_id])
+        UserKillerPerk.all.each do |ukp|
+            if ukp.user_id == @user.id && ukp.killer_id == @killer.id
+                ukp.delete
+            end  
+        end
+        redirect to "/users/#{@user.id}"
     end
+
 end
