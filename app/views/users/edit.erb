@@ -1,6 +1,11 @@
+<nav>
+ <a href='/'>Home</a>
+ 
+ </nav>
 <h1>Edit User</h1>
 <form method = "POST" action = '/users/<%= @user.id %>'>
 <input id = "hidden" type = "hidden" name = "_method" value = "patch">
 <h2>Username: <input type = "text" name = "username" id = "username" value = "<%= @user.username %>"></h2>
 <input type = "submit" value = "Update User">
 </form>
+
