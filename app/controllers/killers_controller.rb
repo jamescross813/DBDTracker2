@@ -20,7 +20,8 @@ class KillersController < ApplicationController
         
     post '/killers' do
         @user = User.find(session[:user_id])
-        @killer = Killer.find_by_id(params[:killer][:killer_id])   
+        @killer = Killer.find(params[:killer][:killer_id])   
+        
         @user.killers << @killer      
         @killerperks =[] 
         
@@ -38,7 +39,7 @@ class KillersController < ApplicationController
         
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])  
-            @killer = Killer.find_by_id(params[:id])
+            @killer = Killer.find(params[:id])
             @killerperks = []
 
             UserKillerPerk.all.each do |ukp|
@@ -50,7 +51,7 @@ class KillersController < ApplicationController
             @killerperks 
             
         else
-            @killer = Killer.find_by_id(params[:id])
+            @killer = Killer.find(params[:id])
         end   
         erb :'/killers/show'
     end
@@ -66,7 +67,7 @@ class KillersController < ApplicationController
                 @perks << perk  
             end
         end 
-        @killer = Killer.find_by_id(params[:id])
+        @killer = Killer.find(params[:id])
        
          erb :'/killers/edit'
      end
@@ -78,7 +79,7 @@ class KillersController < ApplicationController
         
         end    
       
-        @killer = Killer.find_by_id(params[:id])  
+        @killer = Killer.find(params[:id])  
      
         UserKillerPerk.all.each do |ukp|
             
@@ -100,12 +101,14 @@ class KillersController < ApplicationController
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])  
         end      
-        @killer = Killer.find(params[:killer_id])
+        binding.pry
+        @killer = Killer.find(params[:id])
         UserKillerPerk.all.each do |ukp|
             if ukp.user_id == @user.id && ukp.killer_id == @killer.id
                 ukp.delete
             end  
         end
+        
         redirect to "/users/#{@user.id}"
     end
 
