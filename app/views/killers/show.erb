@@ -1,8 +1,9 @@
 
-<% if Helpers.logged_in?(session) && @killerperks.include?(@user.id) %>
+<% if Helpers.logged_in?(session) && Helpers.is_mine?(session, @killer.id) %>
     <h1>Welcome <%= Helpers.current_user(session).username %></h1>
+
 <a href='/killers/<%= @killer.id %>/edit'>Edit</a><br>
-<a href='/users/<%= @user.id %>'>Return to User Homepage</a><br>
+<a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
 
 <form action = '/killers/<%= @killer.id %>/delete' method = "post">
 <input type = "hidden" name = "_method" value = "delete">
@@ -10,7 +11,7 @@
 </form><br>
 
 <% @killerperks.each do |kp| %>
-         
+          
          <h3><a href='/perks/<%= kp.perk_id %>'><%= Perk.find_by_id(kp.perk_id).perk_name %></h3></a>
          
          <% end %>
@@ -28,4 +29,3 @@
 <p>Lore: <br><%= @killer.lore %></p> 
 <h3>Difficulty: <%= @killer.difficulty %></h3>
 <h3>DLC: <%= @killer.dlc %><br>
-

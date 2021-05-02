@@ -1,11 +1,13 @@
 <h1> <%= @currency.currency_name.capitalize %> </h1>
 <h2> Amount: <%= @currency.amount %></h2>
 
-<a href='/currencies/<%= @currency.id %>/edit'>Edit Currency</a> <br>
+
 <br>
 <form action = '/currencies/<%= @currency.id %>/delete' method = "post">
 <input type = "hidden" name = "_method" value = "delete">
 <input type = "submit" value = "Delete Currency">
 </form>
-
+<nav>
+<a href='/currencies/<%= @currency.id %>/edit'>Edit Currency</a> <br>
 <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br>
+</nav>

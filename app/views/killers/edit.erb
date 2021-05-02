@@ -4,18 +4,17 @@
 <%= @killer.name %>
   <form action="/killers/<%= @killer.id %>/edit" method="POST">
     <input id="hidden" type="hidden" name="_method" value="patch">
-   
+   <br>
 
-    <br>
     <p>Select Perks!</p>
-
-
     <h3>Perks</h3>
     <% @perks.each do |p| %>
     
-      <input type="checkbox" name="killer[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>"><%= p.perk_name %> <br>
+    <input type="checkbox" name="killer[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>"><%= p.perk_name %> <br>
     <% end %>
     <br>
 
     <input type="submit" value="Update killer">
   </form> 
+
+  

@@ -36,24 +36,29 @@ class KillersController < ApplicationController
     end
         
     get '/killers/:id' do 
-        
-        if session.has_key?(:user_id)
-            @user = User.find(session[:user_id])  
-            @killer = Killer.find(params[:id])
-            @killerperks = []
+        @killer = Killer.find_by(id: params[:id])
+        if @killer
+            if session.has_key?(:user_id)
+                @user = User.find(session[:user_id])  
+                
+                @killerperks = []
 
-            UserKillerPerk.all.each do |ukp|
-                if ukp.user_id == @user.id && ukp.killer_id == @killer.id
-                    
-                    @killerperks << ukp
+                UserKillerPerk.all.each do |ukp|
+                    if ukp.user_id == @user.id && ukp.killer_id == @killer.id
+                        
+                        @killerperks << ukp
+                    end
                 end
-            end
-            @killerperks 
-            
+                @killerperks 
+                
+            else
+                @killer = Killer.find(params[:id])
+            end   
+        
+            erb :'/killers/show'
         else
-            @killer = Killer.find(params[:id])
-        end   
-        erb :'/killers/show'
+            redirect '/failure'
+        end
     end
 
     get '/killers/:id/edit' do
