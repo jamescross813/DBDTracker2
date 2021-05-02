@@ -37,6 +37,7 @@ class KillersController < ApplicationController
         
     get '/killers/:id' do 
         @killer = Killer.find_by(id: params[:id])
+        
         if @killer
             if session.has_key?(:user_id)
                 @user = User.find(session[:user_id])  
@@ -44,13 +45,11 @@ class KillersController < ApplicationController
                 @killerperks = []
 
                 UserKillerPerk.all.each do |ukp|
-                    if ukp.user_id == @user.id && ukp.killer_id == @killer.id
-                        
+                    if ukp.user_id == @user.id && ukp.killer_id == @killer.id  
                         @killerperks << ukp
                     end
                 end
-                @killerperks 
-                
+                @killerperks   
             else
                 @killer = Killer.find(params[:id])
             end   
@@ -61,12 +60,12 @@ class KillersController < ApplicationController
         end
     end
 
-    get '/killers/:id/edit' do
-        
+    get '/killers/:id/edit' do 
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])  
         end
         @perks = []
+
         Perk.all.each do |perk|
             if perk.role == "Killer"
                 @perks << perk  
@@ -77,11 +76,9 @@ class KillersController < ApplicationController
          erb :'/killers/edit'
      end
         
-    patch '/killers/:id/edit' do
-        
+    patch '/killers/:id/edit' do 
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])  
-        
         end    
       
         @killer = Killer.find(params[:id])  
@@ -108,20 +105,19 @@ class KillersController < ApplicationController
         end      
         @killerusers = @user.killers
         @killer = Killer.find(params[:id])
+       
         UserKillerPerk.all.each do |ukp|
             if ukp.user_id == @user.id && ukp.killer_id == @killer.id
                 ukp.delete
             end  
         end
 
-        @killerusers.each do |ku|
-            
-            if ku.id == @killer.id
-                ku.delete
+            @killerusers.each do |ku|
+                if ku.id == @killer.id
+                    ku.delete
+                end
             end
-        end
-        
-        redirect to "/users/#{@user.id}"
+                redirect to "/users/#{@user.id}"
     end
 
 end

@@ -1,25 +1,20 @@
-<h1>Edit page</h1>
 <h1>Update Survivor</h1>
 
 <h2>Edits for <%= @survivor.name %></h2>
 
   <form action="/survivors/<%= @survivor.id %>" method="POST">
     <input id="hidden" type="hidden" name="_method" value="patch">
-    <label>Edit the Survivor's Name:</label>
-    <br>
-    <input type="text" name="survivor[name]" value="<%= @survivor.name %>">
-
+   <br>
     <br>
     <p>Select Perks!</p>
-
-
-    <h3>Existing Perks</h3>
-    <% @perks.each do |perk| %>
-      <input type="checkbox" name="survivor[perk_id][]" id="<%= perk.id %>" value="<%= perk.id %>" <%='checked' if @survivor.perks.include?(perk) %>><%= perk.name %></input><br>
+    <h3>Perks</h3>
+    <% @perks.each do |p| %>
+    
+    <input type="checkbox" name="survivor[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>"><%= p.perk_name %> <br>
     <% end %>
     <br>
 
     
 
     <input type="submit" value="Update survivor">
-  </form>  %>
+  </form> 

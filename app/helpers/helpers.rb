@@ -10,7 +10,7 @@ class Helpers
         !!session[:user_id]
     end
 
-    def self.is_mine?(session, killer)
+    def self.is_killer_mine?(session, killer)
         
         @user = User.find_by_id(session[:user_id])
         @killer = Killer.find(killer)
@@ -25,6 +25,24 @@ class Helpers
         end
         
         @killerperks.any?
+        
+    end
+
+    def self.is_survivor_mine?(session, survivor)
+        
+        @user = User.find_by_id(session[:user_id])
+        @survivor = Survivor.find(survivor)
+        @survivorperks = []
+        UserSurvivorPerk.all.each do |usp|
+            
+            if usp.user_id == @user.id && usp.survivor_id == @survivor.id
+          
+                @survivorperks << usp
+            end
+            @survivorperks
+        end
+        
+        @survivorperks.any?
         
     end
 

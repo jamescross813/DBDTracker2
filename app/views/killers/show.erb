@@ -1,5 +1,5 @@
 
-<% if Helpers.logged_in?(session) && Helpers.is_mine?(session, @killer.id) %>
+<% if Helpers.logged_in?(session) && Helpers.is_killer_mine?(session, @killer.id) %>
     <h1>Welcome <%= Helpers.current_user(session).username %></h1>
 
 <a href='/killers/<%= @killer.id %>/edit'>Edit</a><br>

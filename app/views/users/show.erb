@@ -19,6 +19,14 @@
             <h3><a href='/killers/<%= k.id %>'><%= k.name %></h3></a>
         <% end %>
             
+
+
+ <h2>Survivors:</h2>
+        <% @survivor_ids.each do |s| %>
+                    
+            <h3><a href='/survivors/<%= s.id %>'><%= s.name %></h3></a>
+        <% end %>
+            
 <% end %>
      
 

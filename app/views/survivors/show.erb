@@ -1,128 +1,24 @@
-class SurvivorsController < ApplicationController
-    get '/survivors' do
-            @survivors = Survivor.all
-            erb :'/survivors/index'
-        end
-        
-    get '/survivors/new' do 
-        @user = User.find(session[:user_id])
-        @survivors = Survivor.all
-        @perks = []
 
-        Perk.all.each do |perk|
-            if perk.role == "Survivor"
-                @perks << perk  
-            end
-        end
-    
-        erb :'/survivors/new'
-    end
-        
-    post '/survivors' do
-        @user = User.find(session[:user_id])
-        @Survivor = Survivor.find(params[:Survivor][:Survivor_id])   
-        
-        @user.survivors << @survivor      
-        @Survivorperks =[] 
-        
-        params[:Survivor][:perk_ids].each do |p|     
-            @kp = UserSurvivorPerk.create(survivor_id: params[:survivor][:survivor_id], user_id: @user.id, perk_id: p)
-            @survivorperks << @kp   
-        end 
-        
-        @survivorperks  
+<% if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id) %>
+    <h1>Welcome <%= Helpers.current_user(session).username %></h1>
 
-        redirect "/survivors/#{@survivor.id}"
-    end
-        
-    get '/survivors/:id' do 
-        @survivor = Survivor.find_by(id: params[:id])
-        if @survivor
-            if session.has_key?(:user_id)
-                @user = User.find(session[:user_id])  
-                
-                @survivorperks = []
+    <a href='/survivors/<%= @survivor.id %>/edit'>Edit</a><br>
+    <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
 
-                UserSurvivorPerk.all.each do |ukp|
-                    if ukp.user_id == @user.id && ukp.survivor_id == @survivor.id
-                        
-                        @survivorperks << ukp
-                    end
-                end
-                @survivorperks 
-                
-            else
-                @survivor = Survivor.find(params[:id])
-            end   
-        
-            erb :'/survivors/show'
-        else
-            redirect '/failure'
-        end
-    end
+<form action = '/survivors/<%= @survivor.id %>/delete' method = "post">
+<input type = "hidden" name = "_method" value = "delete">
+<input type = "submit" value = "Delete Survivor">
+</form><br>
 
-    get '/survivors/:id/edit' do
-        
-        if session.has_key?(:user_id)
-            @user = User.find(session[:user_id])  
-        end
-        @perks = []
-        Perk.all.each do |perk|
-            if perk.role == "Survivor"
-                @perks << perk  
-            end
-        end 
-        @survivor = survivor.find(params[:id])
-       
-         erb :'/survivors/edit'
-     end
-        
-    patch '/survivors/:id/edit' do
-        
-        if session.has_key?(:user_id)
-            @user = User.find(session[:user_id])  
-        
-        end    
-      
-        @survivor = Survivor.find(params[:id])  
-     
-        UserSurvivorPerk.all.each do |ukp|
-            
-            if ukp.user_id == @user.id && ukp.survivor_id == @survivor.id
-                ukp.delete
-            end  
-        end 
+<% @survivorperks.each do |sp| %>
 
-        @survivorperks = []
-        
-        params[:survivor][:perk_ids].each do |p|     
-             UserSurvivorPerk.create(:Survivor_id => @survivor.id, user_id: @user.id, perk_id: p)   
-        end   
+<h3><a href='/perks/<%= sp.perk_id %>'><%= Perk.find_by_id(sp.perk_id).perk_name %></h3></a>
+<% end %>
+<% end %>
 
-        redirect "/survivors/#{@Survivor.id}"
-    end
-        
-    delete '/survivors/:id/delete' do
-        if session.has_key?(:user_id)
-            @user = User.find(session[:user_id])  
-        end      
-        @survivorusers = @user.survivors
-        @survivor = Survivor.find(params[:id])
-        UserSurvivorPerk.all.each do |ukp|
-            if ukp.user_id == @user.id && ukp.Survivor_id == @Survivor.id
-                ukp.delete
-            end  
-        end
-
-        @survivorusers.each do |ku|
-            
-            if ku.id == @survivor.id
-                ku.delete
-            end
-        end
-        
-        redirect to "/users/#{@user.id}"
-    end
-
-end
-
+<h1><%= @survivor.name %></h1>
+<h2>Role: <%= @survivor.role %></h2>
+<p>Overview: <br><%= @survivor.overview %></p> 
+<p>Lore: <br><%= @survivor.lore %></p> 
+<h3>Difficulty: <%= @survivor.difficulty %></h3>
+<h3>DLC: <%= @survivor.dlc %></h3>

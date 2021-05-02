@@ -1,7 +1,7 @@
 <h1>Update Killer</h1>
 
 <h2>Edits for <%= @killer.name %></h2>
-<%= @killer.name %>
+
   <form action="/killers/<%= @killer.id %>/edit" method="POST">
     <input id="hidden" type="hidden" name="_method" value="patch">
    <br>
