@@ -1,4 +1,5 @@
-<% if Helpers.logged_in?(session) %>
+
+<% if Helpers.logged_in?(session) && @killerperks.include?(@user.id) %>
     <h1>Welcome <%= Helpers.current_user(session).username %></h1>
 <a href='/killers/<%= @killer.id %>/edit'>Edit</a><br>
 <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br>
@@ -26,5 +27,6 @@
 <p>Overview: <br><%= @killer.overview %></p> 
 <p>Lore: <br><%= @killer.lore %></p> 
 <h3>Difficulty: <%= @killer.difficulty %></h3>
-<h3>DLC: <%= @killer.dlc %>
+<h3>DLC: <%= @killer.dlc %><br>
 
+<a href = '/'>Homepage</a>
