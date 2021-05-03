@@ -73,6 +73,13 @@ class KillersController < ApplicationController
         end 
         @killer = Killer.find(params[:id])
        
+        @killerperks = []
+        UserKillerPerk.all.each do |ukp|
+            if ukp.user_id == @user.id && ukp.killer_id == @killer.id
+                @killerperks << ukp.perk_id
+            end
+        end
+        @killerperks
          erb :'/killers/edit'
      end
         

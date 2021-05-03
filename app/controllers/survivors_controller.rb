@@ -64,6 +64,7 @@ class SurvivorsController < ApplicationController
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])
         end
+        @survivor = Survivor.find(params[:id])
         @perks = []
 
         Perk.all.each do |p|
@@ -71,7 +72,15 @@ class SurvivorsController < ApplicationController
                 @perks << p
             end
         end
-        @survivor = Survivor.find(params[:id])
+        @survivorperks = []
+        UserSurvivorPerk.all.each do |skp|
+            if skp.user_id == @user.id && skp.survivor_id == @survivor.id
+                @survivorperks << skp.perk_id
+            end
+        end
+        @survivorperks
+
+        
 
         erb :'/survivors/edit'
     end

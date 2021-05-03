@@ -9,8 +9,8 @@
     <p>Select Perks!</p>
     <h3>Perks</h3>
     <% @perks.each do |p| %>
-    
-    <input type="checkbox" name="survivor[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>"><%= p.perk_name %> <br>
+   
+    <input type="checkbox" name="survivor[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>" <%='checked' if  @survivorperks.include?(p.id) %>><%= p.perk_name %> <br>
     <% end %>
     <br>
 
