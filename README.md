@@ -8,16 +8,18 @@ On visiting the site a user is able to create and edit currencies. Additionally,
 
 ## Installation
 
-Try this app with your local host. Clone fromt he repo and run the following:
+Try this app with your local host. Clone from the repo and run the following:
 
 $ bundle install
 
-$ rake db:
+$ rake db:migrate
+
+$ rake db:seed
 
 ## Usage
 
-$ rake db:migrate
-$ rake db:seed
+Set up a local host session
+
 $ shotgun
 
 ## License
