@@ -7,7 +7,11 @@ On visiting the site a user is able to create and edit currencies. Additionally,
 
 ## Installation
 
-    $ gem install DBDTracker2
+Try this app with your local host. Clone fromt he repo and run the following:
+
+$ bundle install
+
+$ rake db:
 
 ## Usage
 
