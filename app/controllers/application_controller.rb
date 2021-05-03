@@ -17,8 +17,6 @@ class ApplicationController < Sinatra::Base
     end
 
     post '/registrations/signup' do 
-    
-     
         @user = User.new(:username => params[:username], :password => params[:password])
         
         if @user.save
@@ -28,7 +26,6 @@ class ApplicationController < Sinatra::Base
           else
             redirect '/failure'
           end
-       
     end
 
     get '/failure' do
@@ -40,8 +37,8 @@ class ApplicationController < Sinatra::Base
     end
 
     post '/login' do
-      
         @user = User.find_by(username: params[:username])
+        
         if @user && @user.authenticate(params[:password])
             session[:user_id] = @user.id
             
