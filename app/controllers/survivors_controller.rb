@@ -7,13 +7,7 @@ class SurvivorsController < ApplicationController
     get '/survivors/new' do 
         @user = User.find(session[:user_id])
         @survivors = Survivor.all
-        @perks = []
-
-        Perk.all.each do |p|
-            if p.role == "Survivor"
-                @perks << p
-            end
-        end
+        @perks = Helpers.survivor_base_perks
 
         erb :'/survivors/new'
     end
@@ -64,23 +58,17 @@ class SurvivorsController < ApplicationController
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])
         end
-        @survivor = Survivor.find(params[:id])
-        @perks = []
 
-        Perk.all.each do |p|
-            if p.role == "Survivor"
-                @perks << p
-            end
-        end
+        @survivor = Survivor.find(params[:id])
+        @perks = Helpers.survivor_base_perks
         @survivorperks = []
+
         UserSurvivorPerk.all.each do |skp|
             if skp.user_id == @user.id && skp.survivor_id == @survivor.id
                 @survivorperks << skp.perk_id
             end
         end
         @survivorperks
-
-        
 
         erb :'/survivors/edit'
     end
@@ -93,7 +81,6 @@ class SurvivorsController < ApplicationController
         @survivor = Survivor.find(params[:id])
 
         UserSurvivorPerk.all.each do|skp|
-
             if skp.user_id == @user.id && skp.survivor_id == @survivor.id
                 skp.delete
             end
@@ -112,20 +99,23 @@ class SurvivorsController < ApplicationController
        if session.has_key?(:user_id)
         @user = User.find(session[:user_id])
        end
+
        @survivorusers = @user.survivors
        @survivor = Survivor.find(params[:id])
 
-       UserSurvivorPerk.all.each do |skp|
-        if skp.user_id == @user.id && skp.survivor_id == @survivor.id
-            skp.delete
+        UserSurvivorPerk.all.each do |skp|
+            if skp.user_id == @user.id && skp.survivor_id == @survivor.id
+                skp.delete
+            end
         end
-    end
+
         @survivorusers.each do |su|
             if su.id == @survivor.id
                 su.delete
             end
         end
-            redirect to "/users/#{@user.id}"
+
+        redirect to "/users/#{@user.id}"
     end
 
 end

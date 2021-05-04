@@ -46,5 +46,26 @@ class Helpers
         
     end
 
+    def self.killer_base_perks
+        @perks = []
+        Perk.all.each do |perk|
+            if perk.role == "Killer"
+            
+                @perks << perk  
+            end
+        end
+        @perks.sort_by(&:perk_name)
+    end
+
+    def self.survivor_base_perks
+        @perks = []
+        Perk.all.each do |perk|
+            if perk.role == "Survivor"
+                @perks << perk  
+            end
+        end
+        @perks.sort_by(&:perk_name)
+    end
+
     
 end
