@@ -36,7 +36,6 @@ class CurrenciesController < ApplicationController
     delete '/currencies/:id/delete' do
         @user = User.find_by_id(session[:user_id])
         @currency = Currency.find_by_id(params[:id])
-        
         @currency.delete
         redirect to "/users/#{@user.id}"
     end
