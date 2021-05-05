@@ -1,3 +1,10 @@
+<a href = '/'>Home</a><br><br>
+<% if Helpers.logged_in?(session) %>
+<nav>
+<a href = "/logout">Log out</a>
+<a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
+</nav>
+
 <h1>Choose a new Survivor</h1>
 
 <form action="/survivors" method="POST">
@@ -19,3 +26,4 @@
 
         <input type="submit" value="Create Survivor">
         </form>
+<%end%>

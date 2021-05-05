@@ -1,4 +1,4 @@
-
+<a href='/'>Home</a><br>
 <% if Helpers.logged_in?(session) && Helpers.is_killer_mine?(session, @killer.id) %>
     <h1>Welcome <%= Helpers.current_user(session).username %></h1>
 <nav>
@@ -18,7 +18,7 @@
         <% end %>
 <% end %>
 
-<a href='/'>Home</a><br>
+
 
 <h1><%= @killer.name %></h1>
 

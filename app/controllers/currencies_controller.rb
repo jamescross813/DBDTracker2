@@ -1,6 +1,7 @@
 class CurrenciesController < ApplicationController
     
     get '/currencies/new' do 
+        @user = User.find(session[:user_id]) 
         erb :'/currencies/new'
     end
     

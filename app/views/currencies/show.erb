@@ -1,3 +1,5 @@
+<a href = '/'>Home</a><br><br>
+<% if Helpers.logged_in?(session) %>
 <nav>
 <a href = "/logout">Log out</a>
 <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
@@ -15,3 +17,5 @@
 <a href='/currencies/<%= @currency.id %>/edit'>Edit Currency</a> <br>
 <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br>
 </nav>
+
+<%end%>

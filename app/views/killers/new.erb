@@ -1,3 +1,9 @@
+<a href = '/'>Home</a><br><br>
+<% if Helpers.logged_in?(session) %>
+<nav>
+<a href = "/logout">Log out</a>
+<a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
+</nav>
 <h1>Choose a New Killer</h1>
 
 <form action="/killers" method="POST">
@@ -18,3 +24,4 @@
 
   <input type="submit" value="Create killer">
 </form>
+<%end%>

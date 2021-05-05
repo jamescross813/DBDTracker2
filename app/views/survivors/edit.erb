@@ -1,3 +1,10 @@
+<a href = '/'>Home</a><br><br>
+<% if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id) %>
+<nav>
+<a href = "/logout">Log out</a>
+<a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
+</nav>
+
 <h1>Update Survivor</h1>
 
 <h2>Edits for <%= @survivor.name %></h2>
@@ -18,3 +25,4 @@
 
     <input type="submit" value="Update survivor">
   </form> 
+  <%end%>

@@ -1,3 +1,10 @@
+<a href = '/'>Home</a><br><br>
+<% if Helpers.logged_in?(session) %>
+<nav>
+<a href = "/logout">Log out</a>
+<a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
+</nav>
+<%end%>
 <h1><%= @perk.perk_name %></h1>
 <h3>Character Name: <%= @perk.name %></h3>
 <h3>Teachable Level: <%= @perk.teach_level %></h3>
