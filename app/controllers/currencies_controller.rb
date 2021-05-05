@@ -25,8 +25,15 @@ class CurrenciesController < ApplicationController
     
     get '/currencies/:id/edit' do
         @user = User.find_by_id(session[:user_id])
-        @currency = Currency.find(params[:id])
+        if Helpers.logged_in?(session)
+            @currency = Currency.find(params[:id])
         erb :'/currencies/edit'
+    
+        else
+            
+            redirect "users/#{@user.id}"
+        end
+            
       end
     
     patch '/currencies/:id' do 

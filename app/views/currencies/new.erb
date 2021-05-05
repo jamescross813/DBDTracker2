@@ -1,5 +1,5 @@
 <a href = '/'>Home</a><br><br>
-<% if Helpers.logged_in?(session) %>
+
 <nav>
 <a href = "/logout">Log out</a>
 <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
@@ -20,4 +20,4 @@
 </form>
 
 
-<%end%>
+
