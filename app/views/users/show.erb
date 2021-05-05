@@ -1,8 +1,8 @@
 <nav>
  <a href='/'>Home</a>
- 
+ <a href = "/logout">Log out</a>
  </nav>
-<a href = "/logout">Log out</a>
+
 <% if Helpers.logged_in?(session) %>
     <h1>Welcome <%= Helpers.current_user(session).username %></h1>
      <h2>Currencies:</h2>

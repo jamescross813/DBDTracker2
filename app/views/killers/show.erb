@@ -1,21 +1,24 @@
 
 <% if Helpers.logged_in?(session) && Helpers.is_killer_mine?(session, @killer.id) %>
     <h1>Welcome <%= Helpers.current_user(session).username %></h1>
-
+<nav>
 <a href='/killers/<%= @killer.id %>/edit'>Edit</a><br>
 <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
+</nav>
 
 <form action = '/killers/<%= @killer.id %>/delete' method = "post">
 <input type = "hidden" name = "_method" value = "delete">
 <input type = "submit" value = "Delete Killer">
 </form><br>
 
-<% @killerperks.each do |kp| %>
+        <% @killerperks.each do |kp| %>
           
-         <h3><a href='/perks/<%= kp.perk_id %>'><%= Perk.find_by_id(kp.perk_id).perk_name %></h3></a>
+            <h3><a href='/perks/<%= kp.perk_id %>'><%= Perk.find_by_id(kp.perk_id).perk_name %></h3></a>
          
-         <% end %>
+        <% end %>
 <% end %>
+
+<a href='/'>Home</a><br>
 
 <h1><%= @killer.name %></h1>
 

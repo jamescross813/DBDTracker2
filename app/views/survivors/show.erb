@@ -10,11 +10,13 @@
 <input type = "submit" value = "Delete Survivor">
 </form><br>
 
-<% @survivorperks.each do |sp| %>
+        <% @survivorperks.each do |sp| %>
 
-<h3><a href='/perks/<%= sp.perk_id %>'><%= Perk.find_by_id(sp.perk_id).perk_name %></h3></a>
+            <h3><a href='/perks/<%= sp.perk_id %>'><%= Perk.find_by_id(sp.perk_id).perk_name %></h3></a>
+        <% end %>
 <% end %>
-<% end %>
+
+<a href='/'>Home</a><br>
 
 <h1><%= @survivor.name %></h1>
 <h2>Role: <%= @survivor.role %></h2>
