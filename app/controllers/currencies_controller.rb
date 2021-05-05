@@ -2,7 +2,11 @@ class CurrenciesController < ApplicationController
     
     get '/currencies/new' do 
         @user = User.find(session[:user_id]) 
+        if Helpers.logged_in?(session)
         erb :'/currencies/new'
+        else 
+            redirect '/failure'
+        end
     end
     
     post '/currencies' do
