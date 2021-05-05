@@ -8,10 +8,10 @@ class SurvivorsController < ApplicationController
         @user = User.find(session[:user_id])
         if Helpers.logged_in?(session) 
         @survivors = Survivor.all
-        
         @perks = Helpers.survivor_base_perks
 
         erb :'/survivors/new'
+
         else
             redirect '/failure'
         end
@@ -24,15 +24,14 @@ class SurvivorsController < ApplicationController
        @user.survivors << @survivor
        @survivorperks = []
 
-       params[:survivor][:perk_ids].each do |p|
-       
-        @sp = UserSurvivorPerk.create(survivor_id: params[:survivor][:survivor_id], user_id: @user.id, perk_id: p)
-        @survivorperks << @sp
-       end
-
+        params[:survivor][:perk_ids].each do |p|
+            @sp = UserSurvivorPerk.create(survivor_id: params[:survivor][:survivor_id], user_id: @user.id, perk_id: p)
+            @survivorperks << @sp
+        end
        @survivorperks
 
        redirect "/survivors/#{@survivor.id}"
+
     end
         
     get '/survivors/:id' do 
@@ -62,25 +61,23 @@ class SurvivorsController < ApplicationController
     get '/survivors/:id/edit' do
         @survivor = Survivor.find(params[:id])
         @user = User.find(session[:user_id])
-        if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id)
-           
-       
-        
 
-       
+        if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id)  
         @perks = Helpers.survivor_base_perks
         @survivorperks = []
 
-        UserSurvivorPerk.all.each do |skp|
-            if skp.user_id == @user.id && skp.survivor_id == @survivor.id
-                @survivorperks << skp.perk_id
+            UserSurvivorPerk.all.each do |skp|
+                if skp.user_id == @user.id && skp.survivor_id == @survivor.id
+                    @survivorperks << skp.perk_id
+                end
             end
-        end
-        @survivorperks
+            @survivorperks
 
         erb :'/survivors/edit'
-    else '/failure'
-    end
+
+        else 
+            redirect'/failure'
+        end
     end
         
     patch '/survivors/:id' do
@@ -90,30 +87,29 @@ class SurvivorsController < ApplicationController
 
         @survivor = Survivor.find(params[:id])
 
-        UserSurvivorPerk.all.each do|skp|
-            if skp.user_id == @user.id && skp.survivor_id == @survivor.id
-                skp.delete
+            UserSurvivorPerk.all.each do|skp|
+                if skp.user_id == @user.id && skp.survivor_id == @survivor.id
+                    skp.delete
+                end
             end
-        end
 
         @survivorperks = []
        
-        params[:survivor][:perk_ids].each do |p|
-            UserSurvivorPerk.create(:survivor_id => @survivor.id, :user_id => @user.id, :perk_id => p)
-        end
+            params[:survivor][:perk_ids].each do |p|
+                UserSurvivorPerk.create(:survivor_id => @survivor.id, :user_id => @user.id, :perk_id => p)
+            end
 
         redirect "/survivors/#{@survivor.id}"
     end
             
     delete '/survivors/:id/delete' do
-       if session.has_key?(:user_id)
         @user = User.find(session[:user_id])
-       end
-
-       @survivorusers = @user.survivors
-       @survivor = Survivor.find(params[:id])
-
-        UserSurvivorPerk.all.each do |skp|
+        @survivor = Survivor.find(params[:id])
+        if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id)  
+           
+            @survivorusers = @user.survivors
+      
+            UserSurvivorPerk.all.each do |skp|
             if skp.user_id == @user.id && skp.survivor_id == @survivor.id
                 skp.delete
             end
@@ -126,6 +122,10 @@ class SurvivorsController < ApplicationController
         end
 
         redirect to "/users/#{@user.id}"
+
+        else 
+            redirect'/failure'
+        end
     end
 
 end
