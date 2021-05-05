@@ -6,10 +6,15 @@ class SurvivorsController < ApplicationController
         
     get '/survivors/new' do 
         @user = User.find(session[:user_id])
+        if Helpers.logged_in?(session) 
         @survivors = Survivor.all
+        
         @perks = Helpers.survivor_base_perks
 
         erb :'/survivors/new'
+        else
+            redirect '/failure'
+        end
     end
         
     post '/survivors' do
@@ -55,11 +60,14 @@ class SurvivorsController < ApplicationController
     end
 
     get '/survivors/:id/edit' do
-        if session.has_key?(:user_id)
-            @user = User.find(session[:user_id])
-        end
-
         @survivor = Survivor.find(params[:id])
+        @user = User.find(session[:user_id])
+        if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id)
+           
+       
+        
+
+       
         @perks = Helpers.survivor_base_perks
         @survivorperks = []
 
@@ -71,6 +79,8 @@ class SurvivorsController < ApplicationController
         @survivorperks
 
         erb :'/survivors/edit'
+    else '/failure'
+    end
     end
         
     patch '/survivors/:id' do
