@@ -102,7 +102,7 @@ class SurvivorsController < ApplicationController
         redirect "/survivors/#{@survivor.id}"
     end
             
-    delete '/survivors/:id/delete' do
+    delete '/survivors/:id' do
         @user = User.find(session[:user_id])
         @survivor = Survivor.find(params[:id])
         if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id)  

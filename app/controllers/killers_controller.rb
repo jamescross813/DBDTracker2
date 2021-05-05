@@ -102,7 +102,7 @@ class KillersController < ApplicationController
         redirect "/killers/#{@killer.id}"
     end
         
-    delete '/killers/:id/delete' do
+    delete '/killers/:id' do
        @user = User.find(session[:user_id])  
        @killer = Killer.find(params[:id])
         if Helpers.logged_in?(session) && Helpers.is_killer_mine?(session, @killer.id)

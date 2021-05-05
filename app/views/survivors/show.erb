@@ -5,7 +5,7 @@
     <a href='/survivors/<%= @survivor.id %>/edit'>Edit</a><br>
     <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
 
-        <form action = '/survivors/<%= @survivor.id %>/delete' method = "post">
+        <form action = '/survivors/<%= @survivor.id %>' method = "post">
         <input type = "hidden" name = "_method" value = "delete">
         <input type = "submit" value = "Delete Survivor">
         </form><br>

@@ -6,7 +6,7 @@
 <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
 </nav>
 
-<form action = '/killers/<%= @killer.id %>/delete' method = "post">
+<form action = '/killers/<%= @killer.id %>' method = "post">
 <input type = "hidden" name = "_method" value = "delete">
 <input type = "submit" value = "Delete Killer">
 </form><br>

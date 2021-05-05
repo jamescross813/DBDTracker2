@@ -21,7 +21,7 @@ class UsersController < ApplicationController
         redirect to "/users/#{@user.id}"
     end
     
-    delete '/users/:id/delete' do
+    delete '/users/:id' do
         @user = User.find_by_id(session[:user_id])
         @user.delete
         redirect to "/"
