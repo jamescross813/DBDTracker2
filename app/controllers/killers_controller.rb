@@ -9,7 +9,7 @@ class KillersController < ApplicationController
 
         if Helpers.logged_in?(session) 
             @killers = Killer.all
-            @perks = Helpers.killer_base_perks
+            @perks = Perk.killer_base_perks
         
             erb :'/killers/new'
         else
@@ -65,7 +65,7 @@ class KillersController < ApplicationController
         @killer = Killer.find(params[:id])
         
         if Helpers.logged_in?(session) && Helpers.is_killer_mine?(session, @killer.id)
-        @perks = Helpers.killer_base_perks
+        @perks = Perk.killer_base_perks
         @killerperks = []
 
             UserKillerPerk.all.each do |ukp|
