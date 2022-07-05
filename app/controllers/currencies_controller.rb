@@ -3,7 +3,7 @@ class CurrenciesController < ApplicationController
     get '/currencies/new' do 
         @user = User.find(session[:user_id]) 
         if Helpers.logged_in?(session)
-        erb :'/currencies/new'
+            erb :'/currencies/new'
         else 
             redirect '/failure'
         end
@@ -26,17 +26,12 @@ class CurrenciesController < ApplicationController
     get '/currencies/:id/edit' do
         @user = User.find_by_id(session[:user_id])
         @currency = Currency.find(params[:id])
-       
         if Helpers.logged_in?(session) && @currency.user_id == @user.id
-            
-        erb :'/currencies/edit'
-    
+            erb :'/currencies/edit'
         else
-            
             redirect "users/#{@user.id}"
-        end
-            
-      end
+        end   
+    end
     
     patch '/currencies/:id' do 
         @user = User.find_by_id(session[:user_id])
@@ -47,10 +42,13 @@ class CurrenciesController < ApplicationController
         redirect to "/currencies/#{@currency.id}"
     end
     
-    delete '/currencies/:id/delete' do
+    delete '/currencies/:id' do
         @user = User.find_by_id(session[:user_id])
         @currency = Currency.find_by_id(params[:id])
-        @currency.delete
-        redirect to "/users/#{@user.id}"
+        if Helpers.logged_in?(session) && @currency.user_id == @user.id
+            @currency.delete
+            redirect to "/users/#{@user.id}"
+        end
+        redirect '/failure'
     end
 end

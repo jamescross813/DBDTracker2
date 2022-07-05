@@ -6,10 +6,15 @@ class KillersController < ApplicationController
         
     get '/killers/new' do 
         @user = User.find(session[:user_id])
-        @killers = Killer.all
-        @perks = Helpers.killer_base_perks
-    
-        erb :'/killers/new'
+
+        if Helpers.logged_in?(session) 
+            @killers = Killer.all
+            @perks = Perk.killer_base_perks
+        
+            erb :'/killers/new'
+        else
+            redirect '/failure'
+        end
     end
         
     post '/killers' do
@@ -56,23 +61,25 @@ class KillersController < ApplicationController
     end
 
     get '/killers/:id/edit' do 
-        if session.has_key?(:user_id)
-            @user = User.find(session[:user_id])  
-        end
-       
-        @perks = Helpers.killer_base_perks
+        @user = User.find(session[:user_id]) 
         @killer = Killer.find(params[:id])
-       
+        
+        if Helpers.logged_in?(session) && Helpers.is_killer_mine?(session, @killer.id)
+        @perks = Perk.killer_base_perks
         @killerperks = []
 
-        UserKillerPerk.all.each do |ukp|
-            if ukp.user_id == @user.id && ukp.killer_id == @killer.id
-                @killerperks << ukp.perk_id
+            UserKillerPerk.all.each do |ukp|
+                if ukp.user_id == @user.id && ukp.killer_id == @killer.id
+                    @killerperks << ukp.perk_id
+                end
             end
-        end
-        @killerperks
+            @killerperks
         
         erb :'/killers/edit'
+
+        else 
+            redirect'/failure'
+        end
      end
         
     patch '/killers/:id/edit' do 
@@ -95,27 +102,28 @@ class KillersController < ApplicationController
         redirect "/killers/#{@killer.id}"
     end
         
-    delete '/killers/:id/delete' do
-        if session.has_key?(:user_id)
-            @user = User.find(session[:user_id])  
-        end      
-
+    delete '/killers/:id' do
+       @user = User.find(session[:user_id])  
+       @killer = Killer.find(params[:id])
+        if Helpers.logged_in?(session) && Helpers.is_killer_mine?(session, @killer.id)
         @killerusers = @user.killers
-        @killer = Killer.find(params[:id])
-       
-        UserKillerPerk.all.each do |ukp|
-            if ukp.user_id == @user.id && ukp.killer_id == @killer.id
-                ukp.delete
-            end  
-        end
-
-        @killerusers.each do |ku|    
-            if ku.id == @killer.id
-                 ku.delete
+        
+            UserKillerPerk.all.each do |ukp|
+                if ukp.user_id == @user.id && ukp.killer_id == @killer.id
+                    ukp.delete
+                end  
             end
-        end
+
+            @killerusers.each do |ku|    
+                if ku.id == @killer.id
+                    ku.delete
+                end
+            end
 
         redirect to "/users/#{@user.id}"
+        else 
+            redirect'/failure'
+        end
     end
 
 end
