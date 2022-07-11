@@ -2,6 +2,12 @@
 
 <% @survivors.each do |s| %>
 
-<a href="/survivors/<%= s.id %>"><%= s.name %></a><br>
+<div class= "card col-4">
+    <h3> <a href="/survivors/<%= s.id %>" class="card-header"><%= s.name %></a></h3>
+        <h4><%=s.role%></h4>
+     
+        <p><%=s.difficulty%><p>
+
+</div>
 
 <% end %>
