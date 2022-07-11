@@ -1,26 +1,27 @@
+<div class="container bg-dark text-light">
+    <% if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id) %>
+        <h1>Welcome <%= Helpers.current_user(session).username %></h1>
 
-<% if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id) %>
-    <h1>Welcome <%= Helpers.current_user(session).username %></h1>
+        <a href='/survivors/<%= @survivor.id %>/edit'>Edit</a><br>
+        <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
 
-    <a href='/survivors/<%= @survivor.id %>/edit'>Edit</a><br>
-    <a href='/users/<%= @user.id %>'>Return to User Homepage</a><br><br>
+            <form action = '/survivors/<%= @survivor.id %>' method = "post">
+            <input type = "hidden" name = "_method" value = "delete">
+            <input type = "submit" value = "Delete Survivor">
+            </form><br>
 
-        <form action = '/survivors/<%= @survivor.id %>' method = "post">
-        <input type = "hidden" name = "_method" value = "delete">
-        <input type = "submit" value = "Delete Survivor">
-        </form><br>
+            <% @survivorperks.each do |sp| %>
 
-        <% @survivorperks.each do |sp| %>
+                <h3><a href='/perks/<%= sp.perk_id %>'><%= Perk.find_by_id(sp.perk_id).perk_name %></h3></a>
+            <% end %>
+    <% end %>
 
-            <h3><a href='/perks/<%= sp.perk_id %>'><%= Perk.find_by_id(sp.perk_id).perk_name %></h3></a>
-        <% end %>
-<% end %>
+    <a href='/'>Home</a><br>
 
-<a href='/'>Home</a><br>
-
-    <h1><%= @survivor.name %></h1>
-        <h2>Role: <%= @survivor.role %></h2>
-            <p>Overview: <br><%= @survivor.overview %></p> 
-            <p>Lore: <br><%= @survivor.lore %></p> 
-                <h3>Difficulty: <%= @survivor.difficulty %></h3>
-                <h3>DLC: <%= @survivor.dlc %></h3>
+        <h1><%= @survivor.name %></h1>
+            <h2>Role: <%= @survivor.role %></h2>
+                <p>Overview: <br><%= @survivor.overview %></p> 
+                <p>Lore: <br><%= @survivor.lore %></p> 
+                    <h3>Difficulty: <%= @survivor.difficulty %></h3>
+                    <h3>DLC: <%= @survivor.dlc %></h3>
+</div>
