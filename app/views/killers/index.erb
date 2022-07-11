@@ -1,7 +1,7 @@
 <a href='/'>Home</a><br><br>
 
 <% @killers.each do |k| %>
-
-<a href="/killers/<%= k.id %>"><%= k.name %></a><br>
-
+<div class= "card">
+    <a href="/killers/<%= k.id %>" class="card-header"><%= k.name %></a>
+</div>
 <% end %>
