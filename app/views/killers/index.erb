@@ -1,9 +1,11 @@
 <a href='/'>Home</a><br><br>
 
 <% @killers.each do |k| %>
-<div class= "card">
+<div class= "card col-4">
    <h3> <a href="/killers/<%= k.id %>" class="card-header"><%= k.name %></a></h3>
     <h4><%=k.power%></h4>
+    # <p class="badge"><%=k.difficulty%><p>
     <p><%=k.difficulty%><p>
+
 </div>
 <% end %>
