@@ -1,22 +1,25 @@
 <a href='/'>Home</a><br>
-<div class="card bg-white offset-3 col-3">
+<div class="card bg-white offset-3 col-4">
 <table>    
     <thead>
         <h1>Log in</h1>
     </thead>
     <tbody>
         <form action = "/login" method = "post">
-            <tr><td><label>Username:</label></tr></td>
-            <tr><td><input type = "text" name = "username" id = "username"></tr></td>
-            <tr><td><label>Password:</label></tr></td> 
-            <tr><td><input type = "text" name ="password" id = "password"></tr></td> 
+            <tr><td><label  class="offset-4">Username:</label></tr></td>
+            <tr><td><input type = "text" name = "username" id = "username"  class="offset-4"></tr></td>
+            <tr><td><label class="offset-4">Password:</label></tr></td> 
+            <tr><td><input type = "text" name ="password" id = "password"  class="offset-4"></tr></td> 
     </tbody>
     <tfoot>
-            <td><button class="btn btn-primary" value = "Log in">Login</button><td>
+    <tr>
+            <td><button class="btn btn-primary mt-2" value = "Log in">Login</button><td>
+            <td><a href ='/registrations/signup'>Not signed up?</a></td>
+            </tr>
         </form>
     </tfoot>
 </table>
 </div>
-<a href ='/registrations/signup'>Not signed up?</a>
+
 
  
