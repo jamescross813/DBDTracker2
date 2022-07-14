@@ -19,26 +19,29 @@
             <a class="nav-link" href='/users/<%= @user.id %>'>Return to User Homepage</a>
         </li>
     </ul>   
-    </div>
-    </nav>
-<h1>Choose a new Survivor</h1>
+</nav>
+<div class="container">
+    <h1>Choose a new Survivor</h1>
 
-<form action="/survivors" method="POST">
-<label>Survivor Name:</label>
-<br>
+    <div class="row">
+        <div class="col">
+            <form action="/survivors" method="POST">
+            <label>Survivor Name:</label>
 
-<% @survivors.each do |s| %>
-    <input type="radio" name="survivor[survivor_id"] id="<%= s.id %>" value="<%= s.id %>"><%= s.name %><br>
-    <% end %>
+            <% @survivors.each do |s| %>
+                <input type="radio" name="survivor[survivor_id"] id="<%= s.id %>" value="<%= s.id %>"><%= s.name %><br>
+                <% end %>
 
-    <br>
+        </div>
+        <div class="col">
+            <h3>Select Perks</h3>
+            <% @perks.each do |p| %>
+            
+                <input type="checkbox" name="survivor[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>"><%= p.perk_name %><br>
+                <% end %>
+        </div>
+    <div>
 
-    <h3>Select Perks</h3>
-    <% @perks.each do |p| %>
-    
-        <input type="checkbox" name="survivor[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>"><%= p.perk_name %><br>
-        <% end %>
-        <br>
-
-        <input type="submit" value="Create Survivor">
+            <input type="submit" value="Create Survivor">
         </form>
+    </div>
