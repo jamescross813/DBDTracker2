@@ -1,72 +1,62 @@
 <% if Helpers.logged_in?(session) %>
 <div class="container-fluid">
-<nav class="navbar navbar-dark navbar-expand bg-dark col-6">
-        <a class="navbar-brand" href="#">
-            <img src="https://ih1.redbubble.net/image.3745834066.5489/st,small,507x507-pad,600x600,f8f8f8.jpg" width="60" height="50" alt="dbd">
-        </a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class= "nav-link" href='/'>Home</a>
-        </li>
-        <li class="nav-item">
-            <a class= "nav-link" href="/killers">Killers List</a>
-        </li>
-        <li class="nav-item">
-            <a class= "nav-link" href="/survivors">Survivors List</a>
-        </li>
-        <li class="nav-item">
-            <a class= "nav-link" href='/users/<%= @user.id %>/edit'>Change username</a>
-        </li>
-        <li class="nav-item">
-            <a class= "nav-link" href='/killers/new'>Add Killers</a>
-        </li>
-        <li class="nav-item">
-            <a class= "nav-link" href='/survivors/new'>Add Survivors</a>
-        </li>
-        <li class="nav-item">
-            <a class= "nav-link" href ='/currencies/new'>Add Currency</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href='/users/<%= @user.id %>'>My Homepage</a>
-        </li>
-    </ul>   
-    <button>
-    
-    <a class="nav-link" href = "/logout">Log out</a>
-</li></button>
-</nav>
+    <nav class="navbar navbar-dark navbar-expand bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="https://ih1.redbubble.net/image.3745834066.5489/st,small,507x507-pad,600x600,f8f8f8.jpg" width="60" height="50" alt="dbd">
+            </a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class= "nav-link" href='/'>Home</a>
+            </li>
+            <li class="nav-item">
+                <a class= "nav-link" href="/killers">Killers List</a>
+            </li>
+            <li class="nav-item">
+                <a class= "nav-link" href="/survivors">Survivors List</a>
+            </li>
+            <li class="nav-item">
+                <a class= "nav-link" href='/users/<%= @user.id %>/edit'>Change username</a>
+            </li>
+            <li class="nav-item">
+                <a class= "nav-link" href='/killers/new'>Add Killers</a>
+            </li>
+            <li class="nav-item">
+                <a class= "nav-link" href='/survivors/new'>Add Survivors</a>
+            </li>
+            <li class="nav-item">
+                <a class= "nav-link" href ='/currencies/new'>Add Currency</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href='/users/<%= @user.id %>'>My Homepage</a>
+            </li>
+        </ul>   
+        <button class="btn btn-light">
+            <a href = "/logout">Log out</a>
+        </button>
+    </nav>
+</div>
+<div class="container">
     <h1 class="text-light">Welcome <%= Helpers.current_user(session).username %></h1>
      <h2 class="text-light">Currencies:</h2>
          <% @currencies.each do |c| %>
-         
             <h3 class="text-light"><a href='/currencies/<%= c.id %>'><%= c.currency_name.capitalize %></h3></a>
          <% end %>
 
-             
-     
-    <h2 class="text-light">Killers:</h2>
-        <% @killer_ids.each do |k| %>
-                    
+    `<h2 class="text-light">Killers:</h2>
+        <% @killer_ids.each do |k| %>          
             <h3 class="text-light"><a href='/killers/<%= k.id %>'><%= k.name %></h3></a>
         <% end %>
             
-
-
- <h2 class="text-light">Survivors:</h2>
-        <% @survivor_ids.each do |s| %>
-                    
+    `<h2 class="text-light">Survivors:</h2>
+        <% @survivor_ids.each do |s| %>         
             <h3 class="text-light"><a href='/survivors/<%= s.id %>'><%= s.name %></h3></a>
-        <% end %>
-            
-<% end %>
-     
-
+        <% end %> 
+    <% end %>
 
 <form action = '/users/<%= @user.id %>' method = "post">
 <input type = "hidden" name = "_method" value = "delete">
 <input type = "submit" value = "Delete User">
 </form>
 
-<br>
          
     
