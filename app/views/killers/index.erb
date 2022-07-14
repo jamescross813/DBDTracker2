@@ -15,18 +15,16 @@
         <li class="nav-item">
             <a class="nav-link" href = "/logout">Log out</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href='/users/<%= @user.id %>'>Return to User Homepage</a>
-        </li>
     </ul>   
+</nav>
+<div class="container">
+    <div class="row offset-2">
+        <% @killers.each do |k| %>
+            <div class= "card col-4 mb-1 ml-1">
+                <h3> <a href="/killers/<%= k.id %>" class="card-header"><%= k.name %></a></h3>
+                    <h4><%=k.power%></h4>
+                    <p><%=k.difficulty%><p>
+                    </div>
+        <% end %>
     </div>
-    </nav>
-<% @killers.each do |k| %>
-    <div class= "card col-4">
-    <h3> <a href="/killers/<%= k.id %>" class="card-header"><%= k.name %></a></h3>
-        <h4><%=k.power%></h4>
-        # <p class="badge"><%=k.difficulty%><p>
-        <p><%=k.difficulty%><p>
-
 </div>
-<% end %>
