@@ -12,7 +12,14 @@
         <li class="nav-item">
             <a class= "nav-link" href="/survivors">Survivors List</a>
         </li>
-    </ul>   
+    
+    <% if Helpers.logged_in?(session)%> 
+    <li class="nav-item">
+        <a class="nav-link" href='/users/<%= @user.id %>'>Return to User Homepage</a>
+    </li>    
+   </ul>
+    <%end%>
+    </ul>
     </div class="offset-1">
         <button class="btn btn-light offset-6">
             <a href ='/registrations/signup'>Sign up</a>
@@ -21,6 +28,7 @@
             <a href ='/login'>Login</a>
         </button>
     </nav>
+    <
     
     <h1 class="text-light">Welcome to DBDTracker</h1>
    

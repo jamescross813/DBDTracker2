@@ -9,6 +9,9 @@ class ApplicationController < Sinatra::Base
     end
     
     get '/' do
+        if session.has_key?(:user_id)
+            @user = User.find(session[:user_id])
+        end
         erb :index
     end
 
