@@ -1,7 +1,4 @@
-<div class="container bg-dark text-light">
-    <% if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id) %>
-        <h1>Welcome <%= Helpers.current_user(session).username %></h1>
-        <nav class="navbar navbar-dark navbar-expand bg-dark col-6">
+<nav class="navbar navbar-dark navbar-expand bg-dark">
         <a class="navbar-brand" href="#">
             <img src="https://ih1.redbubble.net/image.3745834066.5489/st,small,507x507-pad,600x600,f8f8f8.jpg" width="60" height="50" alt="dbd">
         </a>
@@ -15,15 +12,19 @@
         <li class="nav-item">
             <a class= "nav-link" href="/survivors">Survivors List</a>
         </li>
+        
+<div class="container bg-dark text-light">
+    <% if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id) %>
+        
         <li class="nav-item">
             <a class="nav-link" href = "/logout">Log out</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href='/users/<%= @user.id %>'>Return to User Homepage</a>
         </li>
-    </ul>   
+    </ul> 
 </nav>
-
+<h1>Welcome <%= Helpers.current_user(session).username %></h1>
             <form action = '/survivors/<%= @survivor.id %>' method = "post">
             <input type = "hidden" name = "_method" value = "delete">
             <input type = "submit" value = "Delete Survivor">
@@ -34,9 +35,8 @@
                 <h3><a href='/perks/<%= sp.perk_id %>'><%= Perk.find_by_id(sp.perk_id).perk_name %></h3></a>
             <% end %>
     <% end %>
-
-    <a href='/'>Home</a><br>
-
+</nav>
+<div class="text-light">
         <h1><%= @survivor.name %></h1>
             <h2>Role: <%= @survivor.role %></h2>
                 <h4>Overview: </h4>
