@@ -19,27 +19,26 @@
             <a class="nav-link" href='/users/<%= @user.id %>'>Return to User Homepage</a>
         </li>
     </ul>   
-    </div>
-    </nav>
+</nav>
 <div class="container text-light">
-<h1>Update Survivor</h1>
+  <h1>Update Survivor</h1>
 
-<h2>Edits for <%= @survivor.name %></h2>
-<div class="row">
-<div class="col">
-  <form action="/survivors/<%= @survivor.id %>" method="POST">
-    <input id="hidden" type="hidden" name="_method" value="patch">
-   </div>
+  <h2>Edits for <%= @survivor.name %></h2>
+  <div class="row">
+    <div class="col">
+      <form action="/survivors/<%= @survivor.id %>" method="POST">
+        <input id="hidden" type="hidden" name="_method" value="patch">
+    </div>
    <div class="col">
     <p>Select Perks!</p>
       <h3>Perks</h3>
-    
-    
-    <% @perks.each do |p| %>
-      <input type="checkbox" name="survivor[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>" <%='checked' if  @survivorperks.include?(p.id) %>><%= p.perk_name %> <br>
-    <% end %>
+        
+      <% @perks.each do |p| %>
+        <input type="checkbox" name="survivor[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>" <%='checked' if  @survivorperks.include?(p.id) %>><%= p.perk_name %> <br>
+      <% end %>
     </div>
-    <input class= "btn btn-primary" type="submit" value="Update survivor">
-  </form> 
+      <input class= "btn btn-primary" type="submit" value="Update survivor">
+      </form> 
   </div>
+</div>
  
