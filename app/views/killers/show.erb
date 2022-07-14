@@ -1,7 +1,5 @@
-<a href='/'>Home</a><br>
-<% if Helpers.logged_in?(session) && Helpers.is_killer_mine?(session, @killer.id) %>
-    <h1>Welcome <%= Helpers.current_user(session).username %></h1>
-    <nav class="navbar navbar-dark navbar-expand bg-dark col-6">
+<div class="text-light">
+<nav class="navbar navbar-dark navbar-expand bg-dark">
     <a class="navbar-brand" href="#">
         <img src="https://ih1.redbubble.net/image.3745834066.5489/st,small,507x507-pad,600x600,f8f8f8.jpg" width="60" height="50" alt="dbd">
     </a>
@@ -15,15 +13,17 @@
     <li class="nav-item">
         <a class= "nav-link" href="/survivors">Survivors List</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href = "/logout">Log out</a>
-    </li>
+<% if Helpers.logged_in?(session) && Helpers.is_killer_mine?(session, @killer.id) %>
+
     <li class="nav-item">
         <a class="nav-link" href='/users/<%= @user.id %>'>Return to User Homepage</a>
-    </li>
-</ul>   
-</div>
+    </li>    
+   </ul>
+   <button class="btn btn-light offset-4">
+    <a href = "/logout">Log out</a>
+   </button>
 </nav>
+<h1 class= "text-light">Welcome <%= Helpers.current_user(session).username %></h1>
 
 <form action = '/killers/<%= @killer.id %>' method = "post">
 <input type = "hidden" name = "_method" value = "delete">
@@ -36,6 +36,8 @@
          
         <% end %>
 <% end %>
+</ul>
+</nav>
 
 
 
@@ -51,3 +53,4 @@
 <p>Lore: <br><%= @killer.lore %></p> 
 <h3>Difficulty: <%= @killer.difficulty %></h3>
 <h3>DLC: <%= @killer.dlc %><br>
+</div>
