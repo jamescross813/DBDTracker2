@@ -1,3 +1,4 @@
+<div class="container-fluid">
 <nav class="navbar navbar-dark navbar-expand bg-dark">
         <a class="navbar-brand" href="#">
             <img src="https://ih1.redbubble.net/image.3745834066.5489/st,small,507x507-pad,600x600,f8f8f8.jpg" width="60" height="50" alt="dbd">
@@ -12,19 +13,19 @@
         <li class="nav-item">
             <a class= "nav-link" href="/survivors">Survivors List</a>
         </li>
-        
+       
 <div class="container bg-dark text-light">
     <% if Helpers.logged_in?(session) && Helpers.is_survivor_mine?(session, @survivor.id) %>
-        
-        <li class="nav-item">
-            <a class="nav-link" href = "/logout">Log out</a>
-        </li>
+    
         <li class="nav-item">
             <a class="nav-link" href='/users/<%= @user.id %>'>Return to User Homepage</a>
         </li>
     </ul> 
+    <button class="btn btn-light offset-4">
+    <a href = "/logout">Log out</a>
+    </button>
 </nav>
-<h1>Welcome <%= Helpers.current_user(session).username %></h1>
+<h1 class="text-light">Welcome <%= Helpers.current_user(session).username %></h1>
             <form action = '/survivors/<%= @survivor.id %>' method = "post">
             <input type = "hidden" name = "_method" value = "delete">
             <input type = "submit" value = "Delete Survivor">
@@ -35,6 +36,7 @@
                 <h3><a href='/perks/<%= sp.perk_id %>'><%= Perk.find_by_id(sp.perk_id).perk_name %></h3></a>
             <% end %>
     <% end %>
+    </ul>
 </nav>
 <div class="text-light">
         <h1><%= @survivor.name %></h1>
@@ -45,4 +47,5 @@
                 <p><%= @survivor.lore %></p> 
                     <h3>Difficulty: <%= @survivor.difficulty %></h3>
                     <h3>DLC: <%= @survivor.dlc %></h3>
+</div>
 </div>
