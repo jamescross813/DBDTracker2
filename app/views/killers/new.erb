@@ -21,8 +21,10 @@
     </ul>   
     </div>
     </nav>
+<div class="container text-light">
 <h1>Choose a New Killer</h1>
-
+<div class="row">
+<div class="col">
 <form action="/killers" method="POST">
   <label>Killer Name:</label>
   <br>
@@ -31,12 +33,13 @@
       <input type="radio" name="killer[killer_id]" id="<%= k.id %>" value="<%= k.id %>"><%= k.name %><br>
     <% end %>
 
-  <br>
-  
+  </div>
+  <div class="col">
     <h3>Select Your Perks</h3>
       <% @perks.each do |p| %>
         <input type="checkbox" name="killer[perk_ids][]" id="<%= p.id %>" value="<%= p.id %>"><%= p.perk_name %><br>
       <% end %>
-      <br>
-        <input type="submit" value="Create killer">
+      </div>
+      </div>
+        <input class= "btn btn-primary" type="submit" value="Create killer">
 </form>
