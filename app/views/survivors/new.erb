@@ -20,13 +20,13 @@
         </li>
     </ul>   
 </nav>
-<div class="container">
+<div class="container text-light">
     <h1>Choose a new Survivor</h1>
 
     <div class="row">
         <div class="col">
             <form action="/survivors" method="POST">
-            <label>Survivor Name:</label>
+            <h3>Survivor Name</h3>
 
             <% @survivors.each do |s| %>
                 <input type="radio" name="survivor[survivor_id"] id="<%= s.id %>" value="<%= s.id %>"><%= s.name %><br>
