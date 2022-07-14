@@ -18,7 +18,8 @@
     </ul>   
 </nav>
 <div class="container">
-    <div class="row offset-2">
+    <h1 class="text-light">DBD Killers!</h1>
+    <div class="row offset-3">
         <% @killers.each do |k| %>
             <div class= "card col-4 mb-1 ml-1">
                 <h3> <a href="/killers/<%= k.id %>" class="card-header"><%= k.name %></a></h3>
