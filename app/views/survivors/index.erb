@@ -15,16 +15,13 @@
         <li class="nav-item">
             <a class="nav-link" href = "/logout">Log out</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href='/users/<%= @user.id %>'>Return to User Homepage</a>
-        </li>
     </ul>   
-    </div>
-    </nav>
+</nav>
+
 
 <% @survivors.each do |s| %>
 
-<div class= "card col-4">
+<div class= "card">
     <h3> <a href="/survivors/<%= s.id %>" class="card-header"><%= s.name %></a></h3>
         <h4><%=s.role%></h4>
         <p><%=s.difficulty%><p>
