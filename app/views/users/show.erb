@@ -15,9 +15,6 @@
                 <a class= "nav-link" href="/survivors">Survivors List</a>
             </li>
             <li class="nav-item">
-                <a class= "nav-link" href='/users/<%= @user.id %>/edit'>Change username</a>
-            </li>
-            <li class="nav-item">
                 <a class= "nav-link" href='/killers/new'>Add Killers</a>
             </li>
             <li class="nav-item">
@@ -27,7 +24,7 @@
                 <a class= "nav-link" href ='/currencies/new'>Add Currency</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href='/users/<%= @user.id %>'>My Homepage</a>
+                <a class= "nav-link" href='/users/<%= @user.id %>/edit'>Change username</a>
             </li>
         </ul>   
         <button class="btn btn-light">
@@ -52,11 +49,15 @@
             <h3 class="text-light"><a href='/survivors/<%= s.id %>'><%= s.name %></h3></a>
         <% end %> 
     <% end %>
+    <br>
 
-<form action = '/users/<%= @user.id %>' method = "post">
-<input type = "hidden" name = "_method" value = "delete">
-<input type = "submit" value = "Delete User">
-</form>
+<div>
+    <form action = '/users/<%= @user.id %>' method = "post">
+        <input type = "hidden" name = "_method" value = "delete">
+        <input type = "submit" value = "Delete User">
+    </form>
+</div>
+<br>
 
          
     
