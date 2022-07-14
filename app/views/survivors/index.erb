@@ -18,13 +18,15 @@
     </ul>   
 </nav>
 
-
-<% @survivors.each do |s| %>
-
-<div class= "card">
-    <h3> <a href="/survivors/<%= s.id %>" class="card-header"><%= s.name %></a></h3>
-        <h4><%=s.role%></h4>
-        <p><%=s.difficulty%><p>
+<div class= "container">
+    <h1 class= "text-light">DBD Survivors</h1>
+    <div class="row offset-3">
+        <% @survivors.each do |s| %>
+        <div class= "card col-4 mb-1 ml-1">
+            <h3> <a href="/survivors/<%= s.id %>" class="card-header"><%= s.name %></a></h3>
+                <h4><%=s.role%></h4>
+                <p><%=s.difficulty%><p>
+        </div>
+        <% end %>
+    </div>
 </div>
-
-<% end %>
