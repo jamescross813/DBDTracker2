@@ -8,7 +8,7 @@ class SurvivorsController < ApplicationController
         @user = User.find(session[:user_id])
         if Helpers.logged_in?(session) 
         @survivors = Survivor.all
-        @perks = Helpers.survivor_base_perks
+        @perks = Perk.survivor_base_perks
 
         erb :'/survivors/new'
 
