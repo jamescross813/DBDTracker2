@@ -28,7 +28,7 @@
 
 <h1 class="text-light">Edit page</h1>
 
-  <form class="text-white" action="/currencies/<%= @currency.id %>" method="POST">
+  <form class="text-light" action="/currencies/<%= @currency.id %>" method="POST">
     <input id="hidden" type="hidden" name="_method" value="patch">
     <label>Edit the currency name:</label>
     <br>
@@ -42,4 +42,4 @@
     
     <input type="submit" value="Update currency">
   </form> 
-
+<% end %>
