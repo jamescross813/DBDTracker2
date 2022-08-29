@@ -28,22 +28,23 @@
             <a href = "/logout">Log out</a>
         </button>
     </nav>
-<div class="text-light">
-<h1>Create a new Currency</h1>
+<div >
+    <h1 class="text-light">Create a new Currency</h1>
+    <div class="card offset-3 col-4">
+        <form action="/currencies" method="POST">
+        <label class="">Name:</label>
+        <br/>
+        
+            <input type="text" name= "currency_name" placeholder="currency name..."><br/>
 
-<form action="/currencies" method="POST">
-  <label class="">Currency Name:</label>
-  <br>
-  
-    <input type="text" name= "currency_name" placeholder="currency name..."><br>
+        <label class="">Amount:</label>
+        <br/>
+        
+            <input type="text" name="amount" placeholder="amount..."><br/>
 
-  <label class="">Currency Amount:</label>
-  <br>
-  
-    <input type="text" name="amount" placeholder="amount..."><br>
-
-  <input type="submit" value="Create Currency" class=""><br>
-</form>
+            <input type="submit" value="Create Currency" class=""><br/>
+        </form>
+    </div>
 </div>
 <% end %>
 
