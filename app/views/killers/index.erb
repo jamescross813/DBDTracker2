@@ -18,7 +18,7 @@
     <h1 class="text-light">DBD Killers!</h1>
     <div class="row offset-3">
         <% @killers.each do |k| %>
-            <div class= "card col-3 mb-2 ml-1">
+            <div class= "card col-3 mb-2 ml-1 bg-secondary text-light">
                 <h3> <a href="/killers/<%= k.id %>" class="card-header"><%= k.name %></a></h3>
                     <h5>Power: <%=k.power%></h6>
                     <p>Difficulty: <%=k.difficulty%><p>
