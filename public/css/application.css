@@ -1,4 +1,4 @@
-a, a:hover, a:focus, a:active {
+#card-title{
     text-decoration: none;
-    color: inherit;
+    color: white;
 }
