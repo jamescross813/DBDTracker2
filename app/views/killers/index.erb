@@ -20,8 +20,8 @@
         <% @killers.each do |k| %>
             <div class= "card col-3 mb-2 ml-1">
                 <h3> <a href="/killers/<%= k.id %>" class="card-header"><%= k.name %></a></h3>
-                    <h4><%=k.power%></h4>
-                    <p><%=k.difficulty%><p>
+                    <h5>Power: <%=k.power%></h6>
+                    <p>Difficulty: <%=k.difficulty%><p>
             </div>
         <% end %>
     </div>
