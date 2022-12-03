@@ -34,10 +34,7 @@
 </div>
 <div class="container">
     <h1 class="text-light">Welcome <%= Helpers.current_user(session).username %></h1>
-     <h2 class="text-light">Currencies:</h2>
-         <% @currencies.each do |c| %>
-            <h3 class="text-light"><a href='/currencies/<%= c.id %>'><%= c.currency_name.capitalize %></h3></a>
-         <% end %>
+    
 
     `<h2 class="text-light">Killers:</h2>
         <% @killer_ids.each do |k| %>          
