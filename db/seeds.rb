@@ -17,17 +17,11 @@ trapper = Killer.create(name: "Trapper",
                         difficulty: "Easy",
                         dlc: "Base Game")  
                 
-        perk = HTTParty.get("https://dbd-api.herokuapp.com/perks")
-        perk_data = JSON.parse(perk.body)
-
-                perk_data.each do |data|
-                        Perk.create(:perk_name => data["perk_name"], 
-                                :description => data["description"], 
-                                :teach_level => data["teach_level"], 
-                                :role => data ["role"], 
-                                :name => data["name"])  
+        perk_data = Perk.create(perk_name: "Quick & Quiet", 
+                                description: "You do not make as much noise as others when quickly vaulting over obstacles or hiding in Lockers. The vault and hide actions' noise detection and audio range is reduced by 100 %. Quick & Quiet can only be triggered once every 30/25/20 seconds.",  
+                                role: "Survivor", 
+                                name: "Meg Thomas")  
                                 
-                        end 
         
       
 
