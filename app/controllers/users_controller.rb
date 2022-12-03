@@ -1,9 +1,9 @@
 require 'byebug'
 class UsersController < ApplicationController
     get '/users/:id' do
-        # byebug
-        @user = User.find_by_id(session[:user_id])
         
+        @user = User.find_by_id(session[:user_id])
+        byebug
         # @currencies = @user.currencies 
         @survivor_ids = @user.survivors
         @killer_ids = @user.killers
