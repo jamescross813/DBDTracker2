@@ -17,7 +17,7 @@ trapper = Killer.create(name: "Trapper",
                         difficulty: "Easy",
                         dlc: "Base Game")  
                 
-        perk_data = Perk.create(perk_name: "Quick & Quiet", 
+        quickquiet = Perk.create(perk_name: "Quick & Quiet", 
                                 description: "You do not make as much noise as others when quickly vaulting over obstacles or hiding in Lockers. The vault and hide actions' noise detection and audio range is reduced by 100 %. Quick & Quiet can only be triggered once every 30/25/20 seconds.",  
                                 role: "Survivor", 
                                 name: "Meg Thomas")  
