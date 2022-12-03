@@ -36,12 +36,12 @@
     <h1 class="text-light">Welcome <%= Helpers.current_user(session).username %></h1>
     
 
-    `<h2 class="text-light">Killers:</h2>
+    <h2 class="text-light">Killers:</h2>
         <% @killer_ids.each do |k| %>          
             <h3 class="text-light"><a href='/killers/<%= k.id %>'><%= k.name %></h3></a>
         <% end %>
             
-    `<h2 class="text-light">Survivors:</h2>
+    <h2 class="text-light">Survivors:</h2>
         <% @survivor_ids.each do |s| %>         
             <h3 class="text-light"><a href='/survivors/<%= s.id %>'><%= s.name %></h3></a>
         <% end %> 
