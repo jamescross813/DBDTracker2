@@ -1,8 +1,9 @@
-require 'pry'
+require 'byebug'
 class UsersController < ApplicationController
     get '/users/:id' do
+        # byebug
         @user = User.find_by_id(session[:user_id])
-        binding.pry
+        
         # @currencies = @user.currencies 
         @survivor_ids = @user.survivors
         @killer_ids = @user.killers
