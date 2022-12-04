@@ -2,7 +2,7 @@ require 'byebug'
 class CurrenciesController < ApplicationController
     
     get '/currencies/new' do 
-        # byebug
+        
         @user = User.find(session[:user_id]) 
         if Helpers.logged_in?(session)
             erb :'/currencies/new'
@@ -12,6 +12,7 @@ class CurrenciesController < ApplicationController
     end
     
     post '/currencies' do
+        # byebug
         @currency = UserCurrency.new(params)
         @user = User.find(session[:user_id]) 
         @user.currencies << @currency
