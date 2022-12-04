@@ -4,5 +4,6 @@ class CreateUserCurrencies < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.string :currency_name
       t.integer :currency_amount
+    end
   end
 end
