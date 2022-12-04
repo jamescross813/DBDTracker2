@@ -1,5 +1,5 @@
 require_relative '../../config/environment'
-
+require 'byebug'
 class ApplicationController < Sinatra::Base
 
     configure do
@@ -9,6 +9,7 @@ class ApplicationController < Sinatra::Base
     end
     
     get '/' do
+        byebug
         if session.has_key?(:user_id)
             @user = User.find(session[:user_id])
         end
