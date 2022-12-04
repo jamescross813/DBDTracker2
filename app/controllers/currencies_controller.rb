@@ -12,7 +12,7 @@ class CurrenciesController < ApplicationController
     end
     
     post '/currencies' do
-        @currency = Currency.new(params)
+        @currency = UserCurrency.new(params)
         @user = User.find(session[:user_id]) 
         @user.currencies << @currency
         @currency.save
