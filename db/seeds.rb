@@ -38,28 +38,44 @@ hillbilly = Killer.create(name: "Hillbilly",
                         After the deed was done, he continued to live his life at the farm, taking out his deranged violence on the animals that were allowed to run free. As he finally broke free from his shackles he ran through the cornfields, chasing and slaughtering whatever he could find. They never found the bodies of Max and Evelyn, but they did find tortured and disembowelled animals all over the farm.
                         Coldwind Farm was quickly settled and the land split up and sold off. There was never a buyer for the farmhouse. Perhaps it was the sound of the chainsaw you could hear throughout those hot summer nights.",
                         dlc: "Base Game")
-nurse = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
-speed: "115 % | 4.6 m/s",
-terror_radius: "32",
-height: "Tall",
-difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
-shape = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
-speed: "115 % | 4.6 m/s",
-terror_radius: "32",
-height: "Tall",
-difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
+nurse = Killer.create(name: "Nurse", 
+                        realm: "Crotus Prenn Asylum", 
+                        power: "Spencer's Last Breath", 
+                        weapon: "The Bonesaw", 
+                        speed: "96.25 % | 3.85 m/s
+                        333.25 % | 13.33 m/s (Blink)",
+                        terror_radius: "32",
+                        height: "Average",
+                        difficulty: "Very Hard",
+                        overview: "The Nurse is a warping Killer, able to blink through obstacles and quickly close gaps with her Power. She is focused on spotting and tracking, making it harder for Survivors to hide.",
+                        lore: "Sally Smithson came to town with dreams of children's feet and laughter in a wooden home built by her husband Andrew. But life came not with smiles but with plans of destruction. Andrew worked as a lumberjack - a job with its perils. One day, Andrew's foreman had to pay Sally a visit, forever changing her life. She was alone.
+                        Without food on the table and no other option, Sally had to find a way, but the only employment she could get was at the Crotus Prenn Asylum. Nobody sought employment there unless they were in dire need. Just like Sally. Without any education, she started at the bottom, doing the hard night shift.
+                        Over the years, her mind had reached its limits, two decades of seeing horrid things that violate the eyes. Memories that are re-played every night. Being abused verbally and physically, by people without limits. Sally saw insanity from the outside, just to catch it herself.
+                        Finally she could not take it any more and concepts of purification emerged inside her. She did what she felt was necessary. As the morning staff arrived one day in September - they found over fifty dead patients, lifeless, in their bed along four staff members, also dead.
+                        Only Sally had survived the night, but her mind was gone, rocking back and forth non-stop. Exactly what happened is only known by her, but it seems that some of them had been choked as they had marks around their necks. They got her into an ambulance, but that ambulance never reached the hospital. It was found crashed in a nearby wood, all the staff dead and Sally nowhere to be found."
+                        dlc: "Base Game")
+shape = Killer.create(name: "Shape", 
+                        realm: "Haddonfield", 
+                        power: "Bubba's Chainsaw", 
+                        weapon: "The Sledge", 
+                        speed: "IconHelp movementSpeed.png	115 % | 4.6 m/s
+                        132.25 % | 5.29 m/s (Chainsaw Sweep)",
+                        terror_radius: "32",
+                        height: "Tall",
+                        difficulty: "Moderate",
+                        overview: "The Cannibal is a chainsaw-wielding Killer, able to trigger a deadly frenzy using his Power, immediately downing anyone in its path. His Perks revolve around the unknown. Nobody knows where anyone is, especially The Cannibal himself. You are not aware of his presence until his Chainsaw bursts through your spinal cord.",
+                        lore: "Whether killers perform their heinous acts by the compulsions of their diseased minds, or if they are forced into them by external pressures, has long been a matter of debate. But for one killer, nature and nurture are inextricably linked.
+                        Leatherface kills not from a desire to exert his will over others, to satisfy carnal urges, or even to quiet the voices in his head. He kills because he is scared. Scared that others will hurt him; scared that his family will be displeased with him, scared that their shared willingness to eat human flesh will be discovered.
+                        He does as he is told. His family loves him and that is all that matters. Outsiders are a threat, and threats need to be dealt with.
+                        Like those kids that came into the house, uninvited. Walked in like they owned the place. Looked around the house, trying to find out his family’s secrets, no doubt. But Leatherface deals with them, and protects his family just as he’s been taught.
+                        He is not just protector, he has many roles, and each role has its own face. He serves dinner, cares for the family, and dresses well when they eat. His Grandpa and Ma used to care for them all, but Grandpa, he is old now and Ma has been still for a while, so Leatherface and his brothers had to take over. Family is everything to him. Family is security and safety.
+                        But, even though he did his best, one of the kids got away. He tried to stop her, chasing after her as fast as he could, but she had help: another outsider, driving a truck. The evil trucker killed his brother, ran him over like he was a possum. In a fury, Leatherface leapt at him, the saw ready to avenge his family, but the trucker was too quick. He knocked Leatherface aside and turned his own saw against him.
+                        As he watched the outsiders driving away, the rage, grief and pain combined with the worry about what would happen to his family now. They would surely return with the police, and the police would take his brothers, his Grandpa. Without them, what would he do? Without their commands, he would wither and die.
+                        As his world collapsed, Leatherface spun in circles, swinging the saw all around, trying to fight off the myriad external threats that surrounded him.
+                        Then another feeling overtook him. It came from outside his vision, crawling over his skin with cold dread. He realised that no matter what outsiders could do to him, there was something worse, something bigger that lived in the shadows. He was filled with a terror unlike any he had ever felt before. But it was almost comforting, like the fear he'd felt with his family. The fear of disappointing them.
+                        He was brought to a place that was familiar but unknowable, and he instinctively knew what he had to do. He couldn't fail it, the way he had his family. Outsiders would come but he would use his skills to overcome any threats. There would be screaming, but he could make the world quiet again. Until the only sound remaining was the blessed howl of the saw.
+                        Let the outsiders come.",
+                        dlc: "Chapter 5.5:Leatherface")
 hag = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
 power: "Bear Trap", 
