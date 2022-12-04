@@ -24,16 +24,19 @@ wraith = Killer.create(name: "Wraith",
                         It was not until one gloomy day that he, just by accident, saw some blood coming from one of the un-crushed cars. As he opened the trunk he found a young man, gagged and with tied hands with panic filled eyes. Ojomo freed the man who managed to run ten feet before Ojomo's boss stopped him and slit his throat. As Ojomo demanded answers he got explained to him that he'd been nothing more than a simple executioner as more or less every car had a soul in them as this was a 'service' the scrap yard provided to certain 'clients'.
                         Ojomo snapped and went ballistic. He threw his boss in the crusher and let it slowly compress, as the head stuck out, Ojomo grabbed it and pulled head and spine out of the body. Then he left and was never seen again.",
                         dlc: "Base Game")
-hillbilly = Killer.create(name: "Trapper", 
-                        realm: "The MacMillan Estate", 
-                        power: "Bear Trap", 
-                        weapon: "The Cleaver", 
-                        speed: "",
+hillbilly = Killer.create(name: "Hillbilly", 
+                        realm: "Coldwind Farm", 
+                        power: "Chainsaw", 
+                        weapon: "The Hammer", 
+                        speed: "115 % | 4.6 m/s
+                        230 % | 9.2 m/s (Chainsaw)",
                         terror_radius: "32",
                         height: "Tall",
-                        difficulty: "Easy",
-                        overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-                        lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
+                        difficulty: "Moderate",
+                        overview: "The Hillbilly is a high-mobility Killer, able to cover large distances in a short amount of time and instantly down Survivors using his Chainsaw. He is about persistence and resilience. This will make it harder for Survivors to foil him.",
+                        lore: "The son of wealthy landowners Max Thompson Sr. and Evelyn Thompson, this unnamed boy was an unwanted child born to savage parents. Hideously disfigured, he was shut away from society. So ashamed of their son, they bricked him off into a room and fed him through a hole in the wall. When the boy escaped, he took his revenge savagely and terribly, slaughtering the parents that had tortured him instead of raising him.
+                        After the deed was done, he continued to live his life at the farm, taking out his deranged violence on the animals that were allowed to run free. As he finally broke free from his shackles he ran through the cornfields, chasing and slaughtering whatever he could find. They never found the bodies of Max and Evelyn, but they did find tortured and disembowelled animals all over the farm.
+                        Coldwind Farm was quickly settled and the land split up and sold off. There was never a buyer for the farmhouse. Perhaps it was the sound of the chainsaw you could hear throughout those hot summer nights.",
                         dlc: "Base Game")
 nurse = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
