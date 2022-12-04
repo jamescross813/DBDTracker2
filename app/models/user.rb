@@ -7,6 +7,6 @@ class User < ActiveRecord::Base
     has_many :user_survivors
     has_many :survivors, through: :user_survivors
     
-    has_many :currencies
+    has_many :user_currencies
 
 end
