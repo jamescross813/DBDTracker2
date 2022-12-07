@@ -105,28 +105,47 @@ doctor = Killer.create(name: "Doctor",
                         Carter's experimental information extraction had turned to horrific and bizarre torture. Patients and prisoners were found dead or in vegetative states with all types of head trauma. In his office, they found the most terrible discovery of all. Dr Stamper himself, his head peeled open and an array of electrodes and sensors inserted into his still working, but annihilated brain. There was no sign of Herman "The Doctor" Carter, but his research papers suggested that he had been using the prisoners as part of awful ECT experiments as he searched for the panacea of mind control.
                         The government didn't want to know. The black site was condemned and all knowledge of the Léry's Memorial Institute redacted forever.",
                         dlc: "Chapter 4: Spark of Madness")
-huntress = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
-speed: "115 % | 4.6 m/s",
-terror_radius: "32",
-height: "Tall",
-difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
-cannibal = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
-speed: "115 % | 4.6 m/s",
-terror_radius: "32",
-height: "Tall",
-difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
+huntress = Killer.create(name: "Huntress", 
+                        realm: "Red Forest", 
+                        power: "Hunting Hatchets", 
+                        weapon: "Broad Axe", 
+                        speed: "110 % | 4.4 m/s
+                        77 % | 3.08 m/s (Wind-up)",
+                        terror_radius: "20",
+                        height: "Tall",
+                        difficulty: "Moderate",
+                        overview: "The Huntress is a ranged Killer, able to throw Hunting Hatchets at Survivors to injure them from a distance. Her Perks revolve around the hunt of the prey, to track and find so that she can get close enough to make the kill.",
+                        lore: "As soon as Anna was able to walk, her mother started teaching her how to survive a harsh, solitary life in the northern woods. Living in such an extremely remote and dangerous area required skill and resilience. When sunlight became too dim for productive activities, they would take refuge in their house, a sturdy old cabin constructed to resist the toughest winters. Close to the hearth’s warmth, Anna would rest in her mother's arms, surrounded by the few wooden toys and masks she had crafted for her. Drifting off to sleep with stories and lullabies, she dreamt happy dreams, ignorant of the events that would soon change everything.
+                        Anna and her mother were stalking a great elk through the woods. They knew it was dangerous prey, but it had been a particularly difficult winter and they were almost out of food. The spectre of starvation frightened them more than any forest creature. Without warning, the elk reared, bellowed and charged at Anna. She was paralysed with fear as the whole world seemed to shake under the immense beast’s pounding hooves. The elk was close enough for Anna to see the murderous fury in its eyes when her mother threw herself in its path, axe in hand. A blood-curdling scream escaped from her lips as the elk impaled her upon its antlers and hoisted her into the air. With all her strength, she brought her axe down on its head again and again while it tried to shake her loose. With a sickening crack, the antlers snapped and Anna’s mother was free. The beast collapsed.
+                        Anna was too small to move her mother’s broken body, so she sat with her in the clearing where she had fallen. To distract her from the dying elk’s cries, Anna’s mother held her and hummed her favourite lullaby. They stayed like that, the huntress and the elk getting quieter and colder, until Anna was alone in the silent forest. Eventually she stood up and started the long walk back home.
+                        Still a child, she knew just enough about life in the frozen forest to survive. She followed her instincts and became one with the wild. She got older and stronger and practised her hunt. As she grew into a dangerous predator, her humanity became a half-remembered dream.
+                        She widened her territory and lived off her hunts. She worked her way up through squirrels, hares, mink and foxes. Eventually she grew tired of them and hunted more dangerous animals like wolves and bears. When unsuspecting travellers came through her woods, she discovered her new favourite prey: humans. Unlucky souls who strayed into her territory were slaughtered like any other animal. She liked to collect their tools and colourful garments and especially toys when there were little ones. But she could never bring herself to kill the little girls.
+                        Girls she would take back to her house, deep in the woods. They were precious, and looking at them woke up something deep in her heart. She craved the closeness of a loved one, a child of her own. Among the pillaged wooden toys, dolls and story books she couldn't read, the girls would be tied by the neck with a rough and chafing rope fastened firmly to the wall. She couldn't let them wander off, or they would surely die outside.
+                        Every time, the girls would waste away and die of cold or starvation or sickness. Every time, it plunged Anna deeper into pain and sorrow and madness. She was compelled to try again, and started raiding the nearest villages to slaughter families and kidnap their daughters. She wore one of the animal masks her mother crafted for her so many years earlier to try to calm the frightened children. Villagers spread the legend of a half-beast lurking in Red Forest: The Huntress, who killed men and ate little girls.
+                        War eventually came to the forest. German soldiers began to pass through, on the march to attack the collapsing Russian Empire. During these dark times, there were no more travellers. The villagers had abandoned their homes, and no more little ones to be found; only soldiers. Many of them were found with violent axe wounds. Whole groups disappeared mysteriously. Once the war was over, the rumours of The Huntress disappeared with it, engulfed by the Red Forest.",
+                        dlc: "Chapter 5: A Lullaby for the Dark")
+cannibal = Killer.create(name: "Cannibal", 
+                        realm: "None", 
+                        power: "Bubba's Chainsaw", 
+                        weapon: "The Sledge", 
+                        speed: "115 % | 4.6 m/s
+                        132.25 % | 5.29 m/s (Chainsaw Sweep)",
+                        terror_radius: "32",
+                        height: "Tall",
+                        difficulty: "Moderate",
+                        overview: "The Cannibal is a chainsaw-wielding Killer, able to trigger a deadly frenzy using his Power, immediately downing anyone in its path. His Perks revolve around the unknown. Nobody knows where anyone is, especially The Cannibal himself. You are not aware of his presence until his Chainsaw bursts through your spinal cord.",
+                        lore: "Whether killers perform their heinous acts by the compulsions of their diseased minds, or if they are forced into them by external pressures, has long been a matter of debate. But for one killer, nature and nurture are inextricably linked.
+                        Leatherface kills not from a desire to exert his will over others, to satisfy carnal urges, or even to quiet the voices in his head. He kills because he is scared. Scared that others will hurt him; scared that his family will be displeased with him, scared that their shared willingness to eat human flesh will be discovered.
+                        He does as he is told. His family loves him and that is all that matters. Outsiders are a threat, and threats need to be dealt with.
+                        Like those kids that came into the house, uninvited. Walked in like they owned the place. Looked around the house, trying to find out his family’s secrets, no doubt. But Leatherface deals with them, and protects his family just as he’s been taught.
+                        He is not just protector, he has many roles, and each role has its own face. He serves dinner, cares for the family, and dresses well when they eat. His Grandpa and Ma used to care for them all, but Grandpa, he is old now and Ma has been still for a while, so Leatherface and his brothers had to take over. Family is everything to him. Family is security and safety.
+                        But, even though he did his best, one of the kids got away. He tried to stop her, chasing after her as fast as he could, but she had help: another outsider, driving a truck. The evil trucker killed his brother, ran him over like he was a possum. In a fury, Leatherface leapt at him, the saw ready to avenge his family, but the trucker was too quick. He knocked Leatherface aside and turned his own saw against him.
+                        As he watched the outsiders driving away, the rage, grief and pain combined with the worry about what would happen to his family now. They would surely return with the police, and the police would take his brothers, his Grandpa. Without them, what would he do? Without their commands, he would wither and die.
+                        As his world collapsed, Leatherface spun in circles, swinging the saw all around, trying to fight off the myriad external threats that surrounded him.
+                        Then another feeling overtook him. It came from outside his vision, crawling over his skin with cold dread. He realised that no matter what outsiders could do to him, there was something worse, something bigger that lived in the shadows. He was filled with a terror unlike any he had ever felt before. But it was almost comforting, like the fear he'd felt with his family. The fear of disappointing them.
+                        He was brought to a place that was familiar but unknowable, and he instinctively knew what he had to do. He couldn't fail it, the way he had his family. Outsiders would come but he would use his skills to overcome any threats. There would be screaming, but he could make the world quiet again. Until the only sound remaining was the blessed howl of the saw.
+                        Let the outsiders come.",
+                        dlc: "Chapter 5.5: Leatherface")
 nightmare = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
 power: "Bear Trap", 
