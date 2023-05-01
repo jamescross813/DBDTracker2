@@ -176,8 +176,8 @@ nightmare = Killer.create(name: "Wraith",
                         Had she been damned, cursed to spend her days here, in this guise? Or maybe this was another test? Maybe she hadn't failed at all? John always thought one step ahead of everyone else, planned for every eventuality, and he would never give up on her, surely?
                         Jigsaw may have gone but he had passed her onto another. A being for whom she would be The Pig again. Ultimately, she saw now that she had been right in the choices she had made. The time for games was over. There was no chance of redemption for any of them. They were meat, and meat was destined to die.",
                         dlc: "CHAPTER 7: The SAW™ Chapter")
-clown = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
+clown = Killer.create(name: "Clown", 
+                        realm: "Crotus Prenn Asylum", 
 power: "Bear Trap", 
 weapon: "The Cleaver", 
 speed: "115 % | 4.6 m/s",
