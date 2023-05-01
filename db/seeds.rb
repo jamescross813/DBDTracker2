@@ -161,17 +161,21 @@ nightmare = Killer.create(name: "Wraith",
                         It was not until one gloomy day that he, just by accident, saw some blood coming from one of the un-crushed cars. As he opened the trunk he found a young man, gagged and with tied hands with panic filled eyes. Ojomo freed the man who managed to run ten feet before Ojomo's boss stopped him and slit his throat. As Ojomo demanded answers he got explained to him that he'd been nothing more than a simple executioner as more or less every car had a soul in them as this was a "service" the scrap yard provided to certain "clients".
                         Ojomo snapped and went ballistic. He threw his boss in the crusher and let it slowly compress, as the head stuck out, Ojomo grabbed it and pulled head and spine out of the body. Then he left and was never seen again.",
                         dlc: "Base Game")
-pig = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
-speed: "115 % | 4.6 m/s",
-terror_radius: "32",
-height: "Tall",
-difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
+                        pig = Killer.create(name: "Pig", 
+                        realm: "Gideon Meat Plant", 
+                        power: "Jigsaw's Baptism", 
+                        weapon: "Hidden Blade", 
+                        speed: "115 % | 4.6 m/s, 90 % | 3.6 m/s (Crouch), 172.5 % | 6.9 m/s (Ambush Dash)",
+                        terror_radius: "32",
+                        height: "Average",
+                        difficulty: "Hard",
+                        overview: "The Pig is a tormenting Killer, able to crouch into stealth mode, then ambush Survivors from a short distance. She can also apply Reverse Bear Traps to downed Survivors, forcing them to remove it before the timer runs out, triggering an instant death.",
+                        lore: "When John Kramer, better known as Jigsaw, planned for his son to be born during the Chinese Zodiac's Year of the Pig, he wanted it to represent fertility and rebirth; a new beginning for him and his wife, and the start of a charmed life for his son. But that plan was shattered on the night that a junkie broke into his wife's clinic, hoping to score. After this event resulted in the death of his unborn son, John finally caught up with the junkie, making him his first test subject, and The Pig was changed forever too. It became a representation of the disease that was rotting John from the inside, a reminder that we are just meat unless we elevate ourselves by our actions, by grasping life from the jaws of death. The Pig became a vessel, an agent of Jigsaw, conveying the subjects to their test. For some of those who emerged victorious, The Pig could still be a rebirth, into their new lives as apprentices, even disciples, of Jigsaw.
+                        That was the case for Amanda Young, a troubled soul, whose life had been a catalogue of harm, both to herself and those around her. That changed when she faced, and bested, Jigsaw's test. Deciding her life was worth something, she became devoted to Jigsaw's cause, ready to take over when cancer consumed him. But she became more dependent on John, her anguish at his impending death combining with a belief that their test subjects weren't capable of saving themselves, of being reborn in the crucible of the games.
+                        Seeing this, John presented her with another game, another chance to save herself, but Amanda let her rage and jealousy rule her actions. She failed the test and took a bullet as a consequence. Bleeding out on the tiled floor, darkness engulfed Amanda's vision, accompanied by a sound like creaking wood. Then she was in a forest, once more viewing the world through the eyes of a Pig. Trees surrounded her, their branches clawing at her from all sides. Waves of panic washed over her and she could hear her breath reverberating inside the mask.
+                        Had she been damned, cursed to spend her days here, in this guise? Or maybe this was another test? Maybe she hadn't failed at all? John always thought one step ahead of everyone else, planned for every eventuality, and he would never give up on her, surely?
+                        Jigsaw may have gone but he had passed her onto another. A being for whom she would be The Pig again. Ultimately, she saw now that she had been right in the choices she had made. The time for games was over. There was no chance of redemption for any of them. They were meat, and meat was destined to die.",
+                        dlc: "CHAPTER 7: The SAW™ Chapter")
 clown = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
 power: "Bear Trap", 
