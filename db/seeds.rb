@@ -193,16 +193,30 @@ clown = Killer.create(name: "Clown",
                         Since then he has roamed the country, a parasite who could always be found at a carnival or circus, but who would never be seen on any playbill. He lured those brave, or foolish enough, to come near, trapped them and moved on before they could be found missing.
                         Somewhere along the way, he left the ordinary roads of the United States behind him, travelling through a veil of mist and entering a new realm. It was a place of transience and impermanence, perfectly suiting the life he had chosen to lead. Feeling more at home than he had in his entire life, he set up camp and waited for his first visitor.",
                         dlc: "CHAPTER 8: Curtain Call")
-spirit = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
-speed: "115 % | 4.6 m/s",
-terror_radius: "32",
-height: "Tall",
-difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
+spirit = Killer.create(name: "The Spirit", 
+realm: "Yamaoka Estate", 
+power: "Yamaoka's Haunting", 
+weapon: "Shattered Katana", 
+speed: "110 % | 4.4 m/s 176 % | 7.04 m/s (Phase Walk)",
+terror_radius: "24",
+height: "Average",
+difficulty: "Hard",
+overview: "The Spirit is a phase-walking Killer, able to catch Survivors off-guard with her traversal Power, Yamaoka's Haunting. Her Power allows her to teleport from one place to another without being seen.",
+lore: "Rin was the only child of the Yamaoka family. She was raised in the dusty halls of a traditional house in Kagawa. She studied Education at Takamatsu, a private university, which weighed heavily on her family's shaky finances. Her mother got ill that year and the bills started piling up. Rin worked part-time in a futile attempt to help lighten the load.
+Her father faced a debt that grew without end. He started working double-shifts in hopes of obtaining a promotion. That's when he started losing sleep. A dark whisper would keep him awake all night, reminding him of his hopeless situation. Exhausted, he started to lose grasp of reality. Fighting to deny what the voice whispered at night, Rin's father made a desperate move. He met with his superior and explained his situation. He begged for a bonus, an advance, time-off---anything.
+His request was denied. The company had launched a defective production line that was costing them dearly. Someone had to be held accountable and Rin's father fitted the bill perfectly. He was fired after twenty-two years of service.
+That evening, Rin came home from work. She'd stayed late to entertain customers that lingered at the restaurant. As she parked her bike in the shed, she heard her mother's scream come from the house.
+She rushed in, climbing up the stairs to her parents' room. There she found bits and pieces of her mother on the floor. Her limbs were clean-cut, tangled up in an unnatural position. Her breasts were sliced up, revealing her rib cage, which was cracked open. Rin gagged.
+A sharp Katana came crashing down. Rin blocked the blade, which bit into her bare forearm. The shock of recognition interrupted her pain: her father was wielding the Katana with a stoic expression. She cried out to make him stop, but he slashed her arm again.
+She rushed off and slid on the blood-smeared floor. Using the door frame as support, she raised herself up. The Katana ripped through the wall, cleaving her other arm. She screamed in pain as she limped into the hallway, only to be met by her father's blade.
+She stepped back, trembling, as she held together the soft loose flesh of her abdomen. Images of her mother's tangled limbs flashed before her eyes.
+Rin charged at her father, making him stumble back. He punched her torn abdomen and she recoiled in pain. As she struggled to get back up, he slashed her thigh, making her collapse on the floor.
+As she crawled towards the stairs, he grabbed her hair and yanked her against a partition. The glass shattered on impact and she fell through, landing one floor down.
+She heard footsteps somewhere above her. With effort, she moved, worming her way into a sea of broken glass. The shards gnawed at her, ripping her flesh. He had to be stopped. He would not get away with what he'd done to her--with what he'd done to her mother.
+Coughing up blood, her chin grazed the glass, adding to the bleeding. A low-pitched heartbeat started to ring in her ears. Her body felt so heavy she could no longer move.
+The ground shook with her father's footsteps. She knew she was not going to make it, but she no longer cared. She would make him pay, in this life or the next.
+A dark Fog slowly veiled her eyes, but it could not subdue her rage. She would not rest--not yet. The darkness whispered, promising blood and revenge.
+An oath was made and Rin closed her eyes.",
 dlc: "Base Game")
 legion = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
