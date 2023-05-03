@@ -255,17 +255,17 @@ They camped in a damp cave, where Adiris lay in a pool of vomit. Her foot, which
 Kneeling among her retching followers, Adiris made one last prayer. The black fumes of incense rose into the damp air before being wiped off by a cold breeze.
 Neither the body of Adiris nor those of her followers were ever found. Many told tales of her return, but no one truly knew what fate had befallen the High Priestess of Babylon.",
 dlc: "CHAPTER 11: Demise of the Faithful")
-ghostface = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
-speed: "115 % | 4.6 m/s",
+ghostface = Killer.create(name: "Ghost Face", 
+realm: "None", 
+power: "Night Shroud", 
+weapon: "Tactical Knife", 
+speed: "115 % | 4.6 m/s 90 % | 3.6 m/s (Crouch)",
 terror_radius: "32",
-height: "Tall",
-difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
+height: "Average",
+difficulty: "Hard",
+overview: "The Ghost Face is a creepy Killer, able to stalk his victims and sneak up silently using his Power, Night Shroud. Affected Survivors will find themselves vulnerable and oblivious to his presence and must use all of their perception and awareness to protect themselves from his approach.",
+lore: "Danny Johnson, known as Jed Olsen by some, grabbed the newspaper from the kitchen counter: it was a week old, but his face was on the front page, grainy and sunken. It was one of those muggy afternoons in Florida when heat and humidity permeated everything in the kitchen, making him sweat while standing still. He slouched in a damp chair to read. This article had better be good—his work in Roseville had been outstanding.",
+dlc: "CHAPTER 12: Ghost Face®")
 demogorgan = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
 power: "Bear Trap", 
