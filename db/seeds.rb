@@ -315,17 +315,20 @@ Reaching the warden's office, Caleb kicked the door and was met with a fortunate
 With the two men broken and begging for death, the posse dragged them to the commons, where they were left to the growing crowd of prisoners.
 Soaked in blood and sweat, Caleb hobbled to his old cell, hardly paying notice to Bayshore's screams. He sat on the bed's edge as drops of blood ran from his fingertips. A thick, unnatural fog streamed through the barred window. He pulled out his old wrench, cracked and rusted, and ran a thumb along the metal, regarding it with faded eyes. He couldn't remember when it came into his possession. He didn't care to remember. At his feet, he saw a dusty path, and, at its end, silhouettes of all who had done him wrong: the boys who bullied him, the executives who took advantage of him, and, again... Henry Bayshore. Emerging from a fog were the tools to dispose of them — unforgiving steel hooks, brilliant and beautiful in their simplicity. Pain tore through his leg as he stood, but he endured, pushing onwards, walking the dusty path, leaving a trail of blood flowing behind him.",
 dlc: "CHAPTER 15: Chains of Hate")
-executioner = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
-speed: "115 % | 4.6 m/s",
+executioner = Killer.create(name: "Executioner", 
+realm: "Silent Hill", 
+power: "Rites of Judgement", 
+weapon: "Great Knife", 
+speed: "115 % | 4.6 m/s 92 % | 3.68 m/s (Charging Torment Mode) 110 % | 4.4 m/s (Torment Mode)",
 terror_radius: "32",
 height: "Tall",
 difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
+overview: "The Executioner is a map-manipulation Killer, able to torment Survivors with the hazards he creates. Affected Survivors will be vulnerable to his special Hook, the Cage of Atonement and his special mori, Final Judgement.",
+lore: "A sadistic and merciless executioner, Pyramid Head is fixated on dispensing punishment through pain.
+Encumbered by the steel frame upon his head and with a hulking great blade in tow, he stalked the hellish corridors of Silent Hill, committed to a duty that no one truly understood. Where he trod, even monsters fled for the shadows, and those who crossed his path fell victim to unrestrained acts of aggression.
+When his duty was complete and his presence no longer needed, he prepared for the long rest — and yet, his skills were required elsewhere. The Fog that streamed over him was somehow different than that he was accustomed to in Silent Hill, as if each wisp contained the nerves of a creature, writhing, seeking him out.
+There was an unspoken agreement in that moment. The billowing cloud was an invitation to duty and sadism, and Pyramid Head, taking a step into The Fog, accepted his obligation once more.",
+dlc: "CHAPTER 16: Silent Hill")
 blight = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
 power: "Bear Trap", 
