@@ -431,17 +431,48 @@ difficulty: "Easy",
 overview: "The Cenobite is a summoning Killer, able to possess Chain Projectiles and use the Lament Configuration to torture every Survivor at once.",
 lore: "A demon to some, an angel to others. Pinhead is an explorer in the further regions of experience, indulging in the limitless thrill of pleasure and pain. When the puzzle box known as the Lament Configuration — a key to another dimension — was found in The Entity's Realm, it was only a matter of time before it fell into curious hands. Once opened, he arrived. What came next was sweet suffering that spilled over the Realm.",
 dlc: "CHAPTER 21: Hellraiser™")
-artist = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
+artist = Killer.create(name: "Artist", 
+realm: "Forsaken Boneyard", 
+power: "Birds of Torment", 
+weapon: "Sharp Palette Blade", 
 speed: "115 % | 4.6 m/s",
 terror_radius: "32",
 height: "Tall",
-difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
+difficulty: "Moderate",
+overview: "The Artist is a ranged-reconnaissance Killer, able to launch Birds of Torment across the Map to reveal and attack Survivors.",
+lore: "Carmina Mora was a gifted artist who carried the guilt of her young brother's death. Growing up a rugged coastal village in southern Chile, she sketched the sublime landscapes of Patagonia. Sitting outside, she painted dramatic fjords while feeding the crows nested in the tree next to the house.
+She grew up carrying the guilt of her mother's sudden departure. Her father blamed Carmina for her mother's abandonment, which added to her grief. She became the caretaker of Matias, her little brother, despite still being a child herself.
+A year later, Carmina was painting with Matias outside when the telephone rang. Her father remained in the yard, drinking his beer. Carmina rushed to the house to answer the phone and hung up a few seconds later. When she returned outside, Matias was nowhere to be seen. She asked her father, but he had paid no attention to Matias. She called her brother's name, looking for him everywhere. While searching, she saw a bright red coat floating on the narrow creek by the house — Matias' jacket. She jumped into the creek and found him floating on the surface with vacant eyes, unblinking. He had fallen and drowned.
+Her scream tore the sky. Her father found Carmina sobbing on the creek's shore, clutching her brother's body in her arms, surrounded by a murder of crows. Her father snatched Matias's body away from her, and she cried until her voice broke.
+The following morning, the world was cloaked in darkness. Her father did not say a word, because he did not have to. Carmina knew it was all her fault. Months passed, yet her loss was as fresh as morning dew. Crippled with self-loathing, she could no longer paint. Without Matias, life had no meaning.
+On the bleak morning of Matias' birthday, Carmina walked to a narrow bridge several blocks away from home. She was convinced that nothing could bring her relief. Her mother was gone, her brother was dead, and her father blamed her for it all. She was convinced that she had nothing left to live for.
+Carmina walked to the railing of the bridge that stood over the turbulent river. Locals had nicknamed the spot DeathLeap. Several cars drove by Carmina, but none stopped. No one seemed to care. She climbed over the railing and her legs wobbled as she stood on the lip of the bridge. She looked down, watching the fierce river smash into a giant boulder. She closed her eyes.
+'See you soon, Matias.'
+Suddenly, a cacophony of caws filled the sky. Carmina opened her eyes and saw a black cloud of feathers flying towards her. The cloud split open and glossy black crows dove from the sky. One landed on her shoulder and stared intently into Carmina's eyes, as if peering into her soul. Her grip on the railing loosened and the crow cawed raucously. Carmina stared at the crow, confused.
+Another crow landed on the railing, then another. Soon, a flock of crows were covering the railing of the bridge, staying close to her. She felt their heavy stare on her, calculative and enigmatic, as if they were assessing her. She looked down for a second and a thunder of caws interrupted her dark impulse. The crows seemed to care about her wellbeing. As she dangled over the edge with the wind blowing through her raven hair, Carmina felt akin to them. For the first time since Matias had died, Carmina did not feel alone.
+She returned home, giving life another chance. The crows left, but Carmina suspected that if anything happened to her, they would return.
+Inspired by her ordeal, Carmina picked up a brush. In the weeks that followed, she painted her experience, using black ink to depict the DeathLeap with a black cloud of feathers, the murder of crows that saved her life. The experience was transformative and launched her signature, black-ink surrealist art.
+After several years, some colour pierced the darkness, and this shift of medium expanded her art form. She painted large-scale murals on busy street corners, designed grandiose costumes, and recited militant poetry. Carmina's art displayed local, intimate tragedies on a large scale, making them impossible to ignore. And everywhere she performed, crows followed.
+Her performances grew bold and drew the attention of artists who found her style invigorating. She grew close to a group of painters who understood her iconoclastic vision. Her performances launched the Large-Scale Surrealist movement, which became a phenomenon.
+Her renown grew enough to attract the commission of a multinational enterprise, The Vack Label. Carmina investigated the group, discovering that they gifted art pieces to select disreputable congressmen. Vack's commissioned artists seemed to disappear afterward.
+Determined to expose the group's link to corrupt politics, Carmina accepted Vack's commission. The following week, Carmina painted a giant mural on a cemetery's columbarium, displaying the Vack Label logo as a surrealist grim reaper harvesting the fields of Chilean families. She wore a theatrical dress as she painted, on which she had stitched a poem about political revolution.
+The piece sparked a radical debate about corruption. The controversy painted a target on Carmina's back. After receiving anonymous death threats, she took refuge in her father's house, bringing along her closest friends for safety.
+That night, a gang of masked gunmen broke into the house. They swiftly subdued Carmina and her friends, threw them in a van, and drove off.
+The following morning, a dry breeze blew sand on Carmina's face, awakening her. She was seated in a chair in the middle of the desert, with her legs tied and her hands handcuffed. Her friends were lying on the ground, tied up. A shadow fell over her face. Carmina looked up.
+A man dressed in a long robe with his face hidden in a dark hood approached her. He pulled a silvery knife from his robe.
+He grabbed her hands and recited a hymn in an unfamiliar language. Carmina held his gaze. He paused and brought down his blade with a sudden blow.
+She cried in agony as her friends woke to a terrible sight; Carmina's severed hands falling in the sand.
+The hooded man smiled in satisfaction. 'How are you going to paint now?' Carmina cursed and screamed at him, wriggling against the bonds on her legs.
+The man grabbed Carmina's chin. She spit in his face.
+He grunted and pried her mouth open, pulling out her tongue. Carmina struggled in his hold. In a violent blow, he chopped off Carmina's tongue.
+She howled in anguish. The man wiped his blade on his robe, leaving a trail of blood. 'How are you going to recite poems now?'
+Sorrow swelled in Carmina's chest, sharper than pain. Overwhelmed by uncontrollable rage, grief and loss overcame her senses. She had lost her little brother. And she had lost the only way to cope with such pain. Carmina screamed like on the day her brother died.
+Raucous caws echoed through the wasteland. The sky was obscured by a cyclone of dark clouds. Black feathers fell on Carmina's bleeding arms. She looked up and saw a torrent of crows erupting from the clouds, diving on the hooded man.
+As the ravenous crows pecked at his flesh mercilessly, Carmina smiled, watching her Surrealist art coming to life.
+But her heart lurched with rage when she saw the crows move on to their next target, her friends on the ground. She screamed as waves of pain, guilt, and fright overwhelmed her. But it was in vain, the ravenous crows were uncontrollable.
+Darkness fell over her eyes as her friends' agonising screams grew more acute. Death was coming and again, it was her fault.
+A deep, Black Fog engulfed her.",
+dlc: "CHAPTER 22: Portrait of a Murder")
 onryo = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
 power: "Bear Trap", 
