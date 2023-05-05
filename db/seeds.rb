@@ -473,17 +473,27 @@ But her heart lurched with rage when she saw the crows move on to their next tar
 Darkness fell over her eyes as her friends' agonising screams grew more acute. Death was coming and again, it was her fault.
 A deep, Black Fog engulfed her.",
 dlc: "CHAPTER 22: Portrait of a Murder")
-onryo = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
+onryo = Killer.create(name: "Onryō", 
+realm: "None", 
+power: "Deluge of Fear", 
+weapon: "Ring of Fury", 
 speed: "115 % | 4.6 m/s",
-terror_radius: "32",
-height: "Tall",
+terror_radius: "24",
+height: "Short",
 difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
+overview: "The Onryō is a vengeful ghost imbued with the power of Nensha, the Onryō is able to silently and invisibly traverse the Realm, manifesting when she is ready to strike.",
+lore: "A powerful and lethal onryō, Sadako Yamamura was the daughter of a famed seer from Izu Oshima, Japan.
+Her mother left many questions unanswered. In her hometown, sailors disliked the way her mother would spend days on the beach, her eyes fixed on the foaming waves of the sea. Some said, frolic in brine, goblins be thine--if you keep playing in the water, the monster will come for you.
+Nine months later, Sadako was born. As a child, her immense powers seemed impossible to control and flared in anger. This became apparent when she was unable to control her rage during a public demonstration of her mother’s powers. When a journalist called her mother a fraud, Sadako’s powers surged, and the journalist collapsed on the floor, struck dead.
+Then everything went wrong. Her mother passed away and shortly after Sadako was lured to an old, crumbling well. As she leaned over the rim, a long shadow fell over her. She turned and a sudden jolt of pain hit her over the head, cracking it open. Her vision dimmed and her mind swirled into unconsciousness. She felt two hands pushing her over the rim.
+Pain exploded in her skull as she hit the cold ground. A grinding noise came from above and the well darkened, all light obscured like a midday eclipse.
+Every inch of her body screamed in pain. Looking up, she saw the only way out. She dug her nails into the muddy ground and slowly crawled toward the cobbled wall. She gripped the stones to climb but had neither hold nor strength. Each time she clawed up a few inches, her nails slid against the wet wall and she slipped down. Her fingers gushed with blood as the coarse cobblestone tore off her nails and lacerated the flesh underneath. And yet she tried, again and again.
+Decades later, the meadow became a resort, and a log cabin was built above the well. When a visitor rented the cabin, Sadako found an opportunity for revenge. She summoned all her nensha power and projected a terrible curse on a videotape that killed its viewer after seven days.
+Her wrath was like the tides of a stormy sea, violent and unforgiving. As she plunged into a fury, a dark fog coiled at her feet. The sound of crashing waves echoed through the old stone well.
+Suddenly, a tidal surge came crashing down on the cabin's walls, wrecking its logs into a torrent of mud and filth. The black current flooded the well underneath and swallowed Sadako at once.
+When she opened her eyes, she stood on a desolate beach facing a vast, stormy ocean. A thick, black fog caressed the water's surface.
+Sadako walked into a coming wave and slowly disappeared into the opaque fog.",
+dlc: "CHAPTER 23: Sadako Rising")
 dredge = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
 power: "Bear Trap", 
