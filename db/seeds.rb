@@ -420,17 +420,17 @@ He nearly had his target, when a strange fog descended upon them, mixing with th
 The phenomenon meant nothing to him—the frigid cold and decreased oxygen never posing a threat.
 All that mattered was soldiering on into The Fog, continuing the mission: find S.T.A.R.S., exterminate S.T.A.R.S., and kill anyone who gets in the way.",
 dlc: "CHAPTER 20: Resident Evil™")
-cenobite = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
+cenobite = Killer.create(name: "Cenobite", 
+realm: "None", 
+power: "Summons of Pain", 
+weapon: "Hook & Chain", 
 speed: "115 % | 4.6 m/s",
 terror_radius: "32",
 height: "Tall",
 difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
+overview: "The Cenobite is a summoning Killer, able to possess Chain Projectiles and use the Lament Configuration to torture every Survivor at once.",
+lore: "A demon to some, an angel to others. Pinhead is an explorer in the further regions of experience, indulging in the limitless thrill of pleasure and pain. When the puzzle box known as the Lament Configuration — a key to another dimension — was found in The Entity's Realm, it was only a matter of time before it fell into curious hands. Once opened, he arrived. What came next was sweet suffering that spilled over the Realm.",
+dlc: "CHAPTER 21: Hellraiser™")
 artist = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
 power: "Bear Trap", 
