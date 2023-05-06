@@ -494,17 +494,38 @@ Suddenly, a tidal surge came crashing down on the cabin's walls, wrecking its lo
 When she opened her eyes, she stood on a desolate beach facing a vast, stormy ocean. A thick, black fog caressed the water's surface.
 Sadako walked into a coming wave and slowly disappeared into the opaque fog.",
 dlc: "CHAPTER 23: Sadako Rising")
-dredge = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
+dredge = Killer.create(name: "Dredge", 
+realm: "Withered Isle", 
+power: "Reign of Darkness", 
+weapon: "Knotted Appendage", 
 speed: "115 % | 4.6 m/s",
 terror_radius: "32",
 height: "Tall",
-difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
+difficulty: "Moderate",
+overview: "The Dredge is a manifestation of the dark thoughts of a once-vibrant community, able to teleport between Lockers and summon an overwhelming darkness.",
+lore: "The Fold was founded on a private American island in the 1960s by a group of anonymous philanthropists. Their goal was to establish a peaceful society free of dark thoughts and emotions, attracting the dismayed, disenchanted, and disillusioned from all over the country.
+This peace-loving community thrived over the years, and members freely followed the dictates of its charismatic leader Otto Stamper who taught his followers the secret of maintaining happiness through joy-talk, meditation, and the endless reciting of 'good-thinking' mantras.
+But not all was bliss within The Fold, and Otto swiftly banished anyone who confessed to having dark thoughts or speaking dark words. Those he appointed as guardians of The Fold were quick to root out malcontents, banishing anyone who thought or spoke against the almost perfect community he had established.
+Life was more or less a Utopian dream on the island. Until, that is, the darkness began to slowly leak through the cracks of their spiritual dam and members began to mysteriously disappear.
+It wasn't long before fear closed its septic jaws on the island and refused to let go.
+The once happy community now gathered in a few homes chanting all the 'good-thinking' mantras in a desperate attempt to rid their lives of this formless creature that seemed to stalk them in the shadows and consume them in their sleep.
+Otto tried to quell his followers, telling them that there were malcontents among their ranks and that they alone had summoned the Druanee to their Garden of Joy.
+As The Fold bleated fear, Otto evoked desperate measures. Ottomarians were restricted to their homes to prevent the spread of rumours and dark-talk while sleep was forbidden to prevent anyone from releasing dark dreams into the world. Freedom and sleep would return just as soon as the Druanee was no longer upon them.
+But when Ottomarians continued to disappear, Otto assembled his followers near the beach where he placed a screaming woman on a wooden stage. There, in the rain, Otto explained to his drenched, alienated, and sleep-deprived congregation that the woman was a journalist here to destroy everything they had created.
+As the guardians held the trembling woman, she screamed that Otto wasn't the savior he claimed to be. He belonged to an ancient cult, an exclusive club of billionaires that took pleasure in corrupting and sacrificing people, towns and even countries to an Elder God. The journalist told them Otto hadn't banished anyone! He had tortured and sacrificed them and that they would all be next.
+Without hesitation, Otto slit her throat before she could continue to spread lies. As she collapsed to her knees with her hands clasped around her neck, he told his confused and terrified herd that she was working with others within their ranks and that they needed to find the impostors before the Druanee came for them all.
+Otto's words shot over the congregation and reached into the murky recesses of their hearts and dredged up dark and fearful things.
+Years of suppressed emotions began to bubble up as a thick fog pushed through restless legs and feet. Whispers began, and the whispers became panicked mantras, and the mantras became screams and curses as each member accused the next of malthinking and malspeaking.
+Over the howling wind and pounding rain, the screams and curses grew louder and louder as everyone desperately tried to contain the darkness within. But the harder they tried, the quicker they ailed, and within moments the dam burst to release a torrent of hell.
+Otto watched his once blissful and joyful herd suddenly erupt into violence unlike anything he had ever seen before. The Fold bleated accusations and tore each other to bits and pieces with hands and teeth and never once did they look up to see their kind and charismatic shepherd smiling down upon them with eyes that were cold, bleak and without pity.
+When it was all over, Otto felt the creaking, wooden stage shake as a murder of crows circled above. Suddenly, the ground rose and then sank into a thick, oozing black mud like molasses. Moments later, a formless mass squelched out of the muck and rose like a rearing horse to feed upon the writhing mass of butchered humanity.
+It was everywhere and nowhere at once as it slowly picked its way through the carnage, absorbing the darkness, savouring the misery, trailing terrible noises. Shrieks. Cries. Whimpers. Pops. Cracks.
+Feasting sounds.
+Death sounds.
+Dark sounds.
+Otto watched the creature as it slowly began to manifest into the very thing he had imagined—the very thing he had made them all imagine.
+It turned slowly to look at Otto for a long silent moment, then the Druanee trudged away through the thick black sludge, disappearing into the shadows from which it had come.",
+dlc: "CHAPTER 24: Roots of Dread")
 mastermind = Killer.create(name: "Trapper", 
 realm: "The MacMillan Estate", 
 power: "Bear Trap", 
