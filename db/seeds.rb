@@ -526,17 +526,19 @@ Dark sounds.
 Otto watched the creature as it slowly began to manifest into the very thing he had imagined—the very thing he had made them all imagine.
 It turned slowly to look at Otto for a long silent moment, then the Druanee trudged away through the thick black sludge, disappearing into the shadows from which it had come.",
 dlc: "CHAPTER 24: Roots of Dread")
-mastermind = Killer.create(name: "Trapper", 
-realm: "The MacMillan Estate", 
-power: "Bear Trap", 
-weapon: "The Cleaver", 
+mastermind = Killer.create(name: "Mastermind", 
+realm: "None", 
+power: "Virulent Bound", 
+weapon: "Combat Knife", 
 speed: "115 % | 4.6 m/s",
-terror_radius: "32",
-height: "Tall",
-difficulty: "Easy",
-overview: "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-lore: "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-dlc: "Base Game")
+terror_radius: "40",
+height: "Average",
+difficulty: "Moderate",
+overview: "Albert Wesker is a brilliant and ruthless mastermind infused with the Power of Uroboros.",
+lore: "Albert Wesker was a high-ranking official in the Umbrella Corporation. While he made great strides with Umbrella, his ambition drove him to betray the corporation. Believing himself the best test subject, he exposed himself to the Prototype virus. Now with superhuman strength, Wesker faked his death and went underground with a new plan: expose the world to Uroboros, a biological weapon that would eliminate the weak and leave only the strong.
+Wesker began to put his plan to action in Africa but was confronted by members of the Bioterrorism Security Assessment Alliance at a hangar stocked with missiles carrying Uroboros. Determined to be at the vanguard of evolution, he once again made himself a test subject. Exposing himself to Uroboros, he began to evolve in ways he could have never imagined. But as he felt his cells change, a strange black fog seeped into the hangar and filled his vision. When the fog finally dissipated, he found himself in another world surrounded by lesser beings that deserved to be put out of their misery.",
+dlc: "CHAPTER 25: Resident Evil™: PROJECT W")
+
 
 dwight = Survivor.create(name: "Dwight Fairfield", 
                         role: "Nervous Leader", 
