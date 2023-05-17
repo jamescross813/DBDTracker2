@@ -663,7 +663,7 @@ She spiralled out of control and fell into a pattern of self-destruction. She st
 difficulty: "Easy",
 dlc: "CHAPTER 4: Spark of Madness")
 david = Survivor.create(name: "David King", 
-role: "	Rugged Scrapper", 
+role: "Rugged Scrapper", 
 overview: "David King is a rugged Scrapper, rewarding high-risk play.", 
 lore: "The single child of a wealthy family, David King seemed destined for greatness. While growing up in Manchester, he demonstrated serious potential in both sports and academics, and with his family connections, all doors were open to him. He could have succeeded at anything, if it weren't for his combative nature. David lived for the adrenaline rush of a good fight and would go out of his way to get into one.
 His robustness and athletic abilities led him to rugby, where he could cut loose and really cause a ruckus. King excelled and gained a reputation as a promising, if somewhat reckless, rookie. His meteoric rise came to an abrupt end when he lost his temper and assaulted a referee, earning himself a lifetime ban from the league and cutting short what most people assumed was going to be a long, successful career. King was unconcerned; money was no issue, so he took it as an early retirement and focused on other fun things to do.
