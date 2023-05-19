@@ -672,7 +672,7 @@ quentin = Survivor.create(name: "Quentin Smith",
                         As Freddy closed in, a broad grin spreading across his ruined face, Quentin was consumed with a need to see this man finally obliterated. He wished it had been him, not his father, who threw the gas can that ended Krueger’s life, that it had been him who cut Freddy's throat. Perhaps that desire would be enough? This was a realm of the mind after all.
                         He let it consume him, concentrating all his thoughts on wishing Freddy gone. His vision was obscured with roiling tendrils of fog and, when it cleared, he was somewhere else. In another dream? If so, it wasn't his; it felt cold and unfamiliar.
                         A flickering drew his attention and he realised he was by a campfire, and he wasn't alone. Other people were trapped here too, and they needed his help.",
-dlc: "CHAPTER 6: A Nightmare on Elm Street™")
+                        dlc: "CHAPTER 6: A Nightmare on Elm Street™")
 tapp = Survivor.create(name: "Dwight Fairfield", 
 role: "Nervous Leader", 
 overview: "Dwight Fairfield is a nervous Leader, able to locate his allies and increase their effectiveness.\r\n\r\nHis personal Perks, Bond, Prove Thyself, and Leader, allow him to get in proximity of other Survivors and provide bonuses to their actions as well as his own.\r\n\r\nHe is skilled at finding others and working as a group. His Perks help him and others by keeping them together and alive.", 
